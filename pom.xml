@@ -251,6 +251,9 @@
                     <fileset>
                       <directory>${basedir}/var</directory>
                     </fileset>
+                    <fileset>
+                      <directory>${basedir}/output</directory>
+                    </fileset>
                   </filesets>
                 </configuration>
               </plugin>
