@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ##############################################################
+  
+  File: 	nmtopo_ctrlplane.rnc
+  Version: $Id: nmtopo_ctrlplane.rnc 267 2007-09-14 17:56:01Z swany $
+  
+  ##############################################################
+-->
+<grammar ns="http://ogf.org/schema/network/topology/ctrlPlane/20080828/" xmlns:CtrlPlane="http://ogf.org/schema/network/topology/ctrlPlane/20080828/" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <include href="nmtypes.rng"/>
+  <start combine="choice">
+    <a:documentation>Definition of the topology element</a:documentation>
+    <element name="topology">
+      <ref name="CtrlPlaneTopologyContent"/>
+    </element>
+  </start>
+  <define name="CtrlPlaneTopologyContent">
+    <interleave>
+      <!-- & Parameters -->
+      <ref name="Identifier"/>
+      <element name="idcId">
+        <data type="string"/>
+      </element>
+      <zeroOrMore>
+        <choice>
+          <ref name="CtrlPlaneDomain"/>
+          <element name="domainSignature">
+            <ref name="CtrlPlaneDomainSignatureContent"/>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneDomainSignatureContent">
+    <a:documentation>this a placeholder until we discuss and experiment with signatures</a:documentation>
+    <interleave>
+      <attribute name="domainId">
+        <data type="string"/>
+      </attribute>
+      <ref name="anyElement"/>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneDomain">
+    <element name="domain">
+      <interleave>
+        <ref name="Identifier"/>
+        <optional>
+          <ref name="Lifetime"/>
+        </optional>
+        <interleave>
+          <zeroOrMore>
+            <ref name="CtrlPlaneNode"/>
+          </zeroOrMore>
+          <zeroOrMore>
+            <ref name="CtrlPlanePort"/>
+          </zeroOrMore>
+          <zeroOrMore>
+            <ref name="CtrlPlaneLink"/>
+          </zeroOrMore>
+        </interleave>
+      </interleave>
+    </element>
+  </define>
+  <define name="CtrlPlaneNode">
+    <element name="node">
+      <interleave>
+        <ref name="Identifier"/>
+        <optional>
+          <ref name="Address"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="CtrlPlanePort"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="CtrlPlanePort">
+    <element name="port">
+      <interleave>
+        <ref name="Identifier"/>
+        <ref name="CtrlPlaneCapacityContent"/>
+        <zeroOrMore>
+          <ref name="CtrlPlaneLink"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="CtrlPlaneLink">
+    <element name="link">
+      <interleave>
+        <ref name="Identifier"/>
+        <optional>
+          <element name="remoteLinkId">
+            <data type="string"/>
+          </element>
+        </optional>
+        <element name="trafficEngineeringMetric">
+          <data type="string"/>
+        </element>
+        <optional>
+          <ref name="CtrlPlaneCapacityContent"/>
+        </optional>
+        <zeroOrMore>
+          <element name="linkProtectionTypes">
+            <data type="string"/>
+          </element>
+        </zeroOrMore>
+        <zeroOrMore>
+          <element name="administrativeGroups">
+            <ref name="CtrlPlaneAdministrativeGroup"/>
+          </element>
+        </zeroOrMore>
+        <element name="SwitchingCapabilityDescriptors">
+          <oneOrMore>
+            <ref name="CtrlPlaneSwitchingCapabilityDescriptor"/>
+          </oneOrMore>
+        </element>
+      </interleave>
+    </element>
+  </define>
+  <!-- Begin path and endpoint additions -->
+  <define name="CtrlPlanePath">
+    <element name="path">
+      <interleave>
+        <ref name="Identifier"/>
+        <optional>
+          <ref name="Lifetime"/>
+        </optional>
+        <optional>
+          <attribute name="direction">
+            <choice>
+              <value>upstream</value>
+              <value>downstream</value>
+            </choice>
+          </attribute>
+        </optional>
+        <ref name="CtrlPlanePathContent"/>
+      </interleave>
+    </element>
+  </define>
+  <!-- a path consists of a list of hops, and/or links -->
+  <define name="CtrlPlanePathContent">
+    <zeroOrMore>
+      <element name="hop">
+        <ref name="CtrlPlaneHopContent"/>
+      </element>
+    </zeroOrMore>
+  </define>
+  <define name="CtrlPlaneHopContent">
+    <interleave>
+      <ref name="Identifier"/>
+      <choice>
+        <ref name="DomainIdRef"/>
+        <ref name="NodeIdRef"/>
+        <ref name="PortIdRef"/>
+        <ref name="LinkIdRef"/>
+        <ref name="CtrlPlaneDomain"/>
+        <ref name="CtrlPlaneNode"/>
+        <ref name="CtrlPlanePort"/>
+        <ref name="CtrlPlaneLink"/>
+      </choice>
+      <zeroOrMore>
+        <element name="nextHop">
+          <ref name="CtrlPlaneNextHopContent"/>
+        </element>
+      </zeroOrMore>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneNextHopContent">
+    <interleave>
+      <optional>
+        <attribute name="weight">
+          <data type="integer"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="optional">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </attribute>
+      </optional>
+      <data type="string"/>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneBidirectionalPath">
+    <element name="bidirectionalPath">
+      <ref name="CtrlPlaneBidirectionalPathContent"/>
+    </element>
+  </define>
+  <define name="CtrlPlaneBidirectionalPathContent">
+    <interleave>
+      <ref name="Identifier"/>
+      <optional>
+        <ref name="Lifetime"/>
+      </optional>
+      <!--
+        We have to do this so that it can be validated using trang/jing and still
+        have the paths appear in an arbitrary order
+      -->
+      <choice>
+        <group>
+          <ref name="CtrlPlaneDownstreamPathContent"/>
+          <ref name="CtrlPlaneUpstreamPathContent"/>
+        </group>
+        <group>
+          <ref name="CtrlPlaneUpstreamPathContent"/>
+          <ref name="CtrlPlaneDownstreamPathContent"/>
+        </group>
+      </choice>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneDownstreamPathContent">
+    <element name="path">
+      <interleave>
+        <optional>
+          <ref name="Identifier"/>
+        </optional>
+        <attribute name="direction">
+          <value>downstream</value>
+        </attribute>
+        <ref name="CtrlPlanePathContent"/>
+      </interleave>
+    </element>
+  </define>
+  <define name="CtrlPlaneUpstreamPathContent">
+    <element name="path">
+      <interleave>
+        <optional>
+          <ref name="Identifier"/>
+        </optional>
+        <attribute name="direction">
+          <value>upstream</value>
+        </attribute>
+        <ref name="CtrlPlanePathContent"/>
+      </interleave>
+    </element>
+  </define>
+  <!-- End path and endpoint -->
+  <define name="CtrlPlaneAdministrativeGroup">
+    <interleave>
+      <element name="group">
+        <data type="int"/>
+      </element>
+      <optional>
+        <element name="groupID">
+          <data type="string"/>
+        </element>
+      </optional>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilityDescriptor">
+    <interleave>
+      <element name="switchingcapType">
+        <choice>
+          <value>psc-1</value>
+          <value>psc-2</value>
+          <value>psc-3</value>
+          <value>psc-4</value>
+          <value>l2sc</value>
+          <value>tdm</value>
+          <value>lsc</value>
+          <value>fsc</value>
+        </choice>
+      </element>
+      <element name="encodingType">
+        <choice>
+          <value>packet</value>
+          <value>ethernet</value>
+          <value>pdh</value>
+          <value>sdh/sonet</value>
+          <value>digital wrapper</value>
+          <value>lambda</value>
+          <value>fiber</value>
+          <value>fiberchannel</value>
+          <data type="string"/>
+        </choice>
+      </element>
+      <oneOrMore>
+        <element name="switchingCapabilitySpecificInfo">
+          <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo"/>
+        </element>
+      </oneOrMore>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo">
+    <choice>
+      <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo_psc"/>
+      <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo_l2sc"/>
+      <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo_tdm"/>
+      <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo_lsc"/>
+      <ref name="CtrlPlaneSwitchingCapabilitySpecificInfo_fsc"/>
+    </choice>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo_psc">
+    <element name="capability">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo_tdm">
+    <element name="capability">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo_lsc">
+    <element name="capability">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo_fsc">
+    <element name="capability">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="CtrlPlaneSwitchingCapabilitySpecificInfo_l2sc">
+    <interleave>
+      <element name="interfaceMTU">
+        <data type="int"/>
+      </element>
+      <element name="vlanRangeAvailability">
+        <data type="string"/>
+      </element>
+      <optional>
+        <element name="suggestedVLANRange">
+          <data type="string"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="vlanTranslation">
+          <choice>
+            <value>true</value>
+            <value>false</value>
+          </choice>
+        </element>
+      </optional>
+    </interleave>
+  </define>
+  <define name="CtrlPlaneCapacityContent">
+    <a:documentation>Capacity Description Pattern  </a:documentation>
+    <interleave>
+      <optional>
+        <element name="capacity">
+          <data type="string"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="maximumReservableCapacity">
+          <data type="string"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="minimumReservableCapacity">
+          <data type="string"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="granularity">
+          <data type="string"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="unreservedCapacity">
+          <data type="string"/>
+        </element>
+      </optional>
+    </interleave>
+  </define>
+</grammar>

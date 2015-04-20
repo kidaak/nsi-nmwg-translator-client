@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsa:nsa id="urn:ogf:network:es.net:2013:nsa" version="2015-01-27T12:12:00Z" expires="2016-01-27T12:34:34.701-04:00" xmlns:nsa="http://schemas.ogf.org/nsi/2014/02/discovery/nsa"
+    xmlns:xcard="urn:ietf:params:xml:ns:vcard-4.0">
+    <name>ESnet OSCARS uPA</name>
+    <softwareVersion>nsibridge-v1</softwareVersion>
+    <adminContact>
+        <xcard:vcard>
+            <xcard:uid>
+                <xcard:uri>urn:uuid:c8cdbb80-dac7-11e3-9c1a-0800200c9a66</xcard:uri>
+            </xcard:uid>
+            <xcard:prodid>
+                <xcard:text>ESnet - OSCARS NSI Bridge</xcard:text>
+            </xcard:prodid>
+            <xcard:rev>
+                <xcard:timestamp>20140513T195243Z</xcard:timestamp>
+            </xcard:rev>
+            <xcard:kind>
+                <xcard:text>individual</xcard:text>
+            </xcard:kind>
+            <xcard:fn>
+                <xcard:text>Chin Guok</xcard:text>
+            </xcard:fn>
+            <xcard:n>
+                <xcard:surname>Guok</xcard:surname>
+                <xcard:given>Chin</xcard:given>
+            </xcard:n>
+            <xcard:email>
+                <xcard:text>chin@es.net</xcard:text>
+            </xcard:email>
+        </xcard:vcard>
+    </adminContact>
+    <location>
+        <longitude>-122.25023</longitude>
+        <latitude>37.87692</latitude>
+    </location>
+    <networkId>urn:ogf:network:es.net:2013:</networkId>
+    <interface>
+        <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
+        <href>https://oscars.es.net/ConnectionService</href>
+    </interface>
+    <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
+    <peersWith>urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
+</nsa:nsa>

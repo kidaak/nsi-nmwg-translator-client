@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:configuration xmlns:tns="http://schemas.es.net/nsi/2014/12/topology/translator/configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.es.net/nsi/2014/12/topology/translator/configuration file:/Users/hacksaw/src/github/nsi-topology-translator-client/src/main/xsd/Configuration.xsd">
+    <nmwg>
+        <baseURL>https://ndb7.net.internet2.edu/TopologyViewer/</baseURL>
+        <parameters type="ts_instance">http://dcn-ts.internet2.edu:8012/perfSONAR_PS/services/topology</parameters>
+    </nmwg>
+    <nsa>config/nsa-esnet.xml</nsa>
+    <dds>https://nsi-aggr-west.es.net/discovery</dds>
+    <topology>output/topology-esnet.xml</topology>
+    <mapping>output/mapping-esnet.json</mapping>
+    <lifeTime>5184000</lifeTime>
+    <serviceDefintion id="EVTS.A-GOLE">
+        <name>GLIF Automated GOLE Ethernet VLAN Transfer Service</name>
+        <encoding>http://schemas.ogf.org/nml/2012/10/ethernet</encoding>
+        <labelSwapping>true</labelSwapping>
+        <labelType>http://schemas.ogf.org/nml/2012/10/ethernet#vlan</labelType>
+        <serviceType>http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE</serviceType>
+        <include>bnl-</include>
+        <include>fnal-</include>
+        <include>manlan</include>
+        <include>xo-osf-rt1</include>
+        <include>star-tb1</include>
+        <include>lbl-mr2:xe-8_2_0</include>
+        <include>pnwg-cr5:10_1_2</include>
+        <include>pnwg-cr5:10_1_7</include>
+        <include>wash-cr5:6_1_1:wix</include>
+        <include>star-cr5:10_1_8</include>
+        <include>chic-cr5:5_1_1:al2s</include>
+        <include>sunn-cr5:10_1_6</include>
+        <include>sunn-cr5:8_1_1:caltech</include>
+        <include>star-cr5:6_2_1:umich</include>
+        <include>amst-cr5:3_1_1</include>
+    </serviceDefintion>
+    <peering id="urn:ogf:network:es.net:2013::amst-cr5:3_1_1:+">
+        <inbound>urn:ogf:network:netherlight.net:2013:production7:esnet-out</inbound>
+        <outbound>urn:ogf:network:netherlight.net:2013:production7:esnet-in</outbound>
+        <labels type="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1770-1790</labels>
+    </peering>
+    <client production="true">
+        <keyStore type="JKS">
+            <file>config/keystore.jks</file>
+            <password>changeit</password>
+        </keyStore>
+        <trustStore type="JKS">
+            <file>config/truststore.jks</file>
+            <password>changeit</password>
+        </trustStore>
+    </client>
+</tns:configuration>

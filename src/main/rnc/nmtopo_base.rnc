@@ -1,0 +1,189 @@
+# ##############################################################
+#
+# File:    nmtopo_base.rnc - Schema to describe network elements
+# Version: $Id$
+#
+# ##############################################################
+
+# ##############################################################
+# Namespace definitions
+# ##############################################################
+ default namespace nmtb =
+   "http://ogf.org/schema/network/topology/base/20070707/"
+
+# External schema files
+ include "nmtypes.rnc"
+
+# generic Topology can be a root element
+ start |= Topology
+
+ Topology = element topology {
+     Domain*
+     & BaseNode*
+     & BaseLink*
+     & BasePort*
+     & BaseNetwork*
+     & BasePath*
+   }
+
+ Domain = element domain {
+     Identifier?
+     & IdReference?
+     & BaseNode*
+     & BaseLink*
+     & BaseNetwork*
+     & BasePath*
+   }
+
+## ########################
+## generic node
+## ########################
+ BaseNode = element node { BaseNodeContent }
+ BaseNodeContent =
+   Identifier?
+   & IdReference?
+   & Name*
+   & Address*
+   & Relation*
+   & Lifetime?
+   & element role { xsd:string }?
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element location { LocationContent }?
+   & element contact { ContactInformationContent }*
+   & element comments { xsd:string }*
+   & BasePort*
+   & BaseService*
+
+ ContactInformationContent =
+   attribute priority { xsd:integer }?
+   & element email { xsd:string }?
+   & element phoneNumber { xsd:string }?
+   & element administrator { xsd:string }?
+   & element institution { xsd:string }?
+
+ LocationContent =
+   element continent { xsd:string }?
+   & element country { xsd:string }?
+   & element zipcode { xsd:integer }?
+   & element state { xsd:string }?
+   & element institution { xsd:string }?
+   & element city { xsd:string }?
+   & element streetAddress { xsd:string }?
+   & element floor { xsd:string }?
+   & element room { xsd:string }?
+   & element cage { xsd:string }?
+   & element rack { xsd:string }?
+   & element shelf { xsd:string }?
+   & element latitude { xsd:float }?
+   & element longitude { xsd:float }?
+
+## ########################
+## generic port
+## ########################
+ BasePort = element port { BasePortContent }
+ BasePortContent =
+   Identifier?
+   & IdReference?
+   & Name*
+   & Address*
+   & Relation*
+   & Lifetime?
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element capacity { xsd:string }?
+   & element mtu { xsd:string }?
+   & element comments { xsd:string }*
+   & BaseLink*
+
+## ########################
+## generic link
+## ########################
+ BaseLink = element link { BaseLinkContent }
+ BaseLinkContent =
+   Identifier?
+   & IdReference?
+   & Name*
+   & Relation*
+   & Lifetime?
+   & element remoteLinkId { xsd:string }
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element globalName {
+       attribute type { xsd:string }?
+       & xsd:string
+     }?
+   & element comments { xsd:string }*
+
+## ########################
+## generic network
+## ########################
+ BaseNetwork = element network { BaseNetworkContent }
+ BaseNetworkContent =
+   Identifier?
+   & IdReference?
+   & NodeIdRef*
+   & PortIdRef*
+   & LinkIdRef*
+   & Name*
+   & Relation*
+   & Lifetime?
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element comments { xsd:string }*
+
+## ########################
+## generic path
+## ########################
+ BasePath =
+   element path { BasePathContent }
+
+# a path consists of a list of hops
+ BasePathContent =
+   Identifier
+   & Relation*
+   & Lifetime?
+   & element comments { xsd:string }*
+   & element hop { HopContent }*
+
+ HopContent =
+   Identifier,
+   (
+     DomainIdRef
+     | NodeIdRef
+     | PortIdRef
+     | LinkIdRef
+     | PathIdRef
+     | NetworkIdRef
+   )
+
+## ########################
+## generic endpoint pair
+## ########################
+ BaseEndPointPair =
+   element endPointPair { BaseEndPointPairContent }
+
+# an endpoint pair consists of two endpoints in the form of ports
+ BaseEndPointPairContent =
+   Name*
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element comments { xsd:string }*
+   & element src { (BasePortContent | PortIdRef) }
+   & element dst { (BasePortContent | PortIdRef) }
+
+## ########################
+## generic service
+## ########################
+ BaseService =
+   element service { BaseServiceContent }
+
+ BaseServiceContent =
+   Identifier?
+   & IdReference?
+   & Name*
+   & element type { xsd:string }?
+   & element description { xsd:string }?
+   & element comments { xsd:string }*
+   & Relation*
+   & Lifetime?

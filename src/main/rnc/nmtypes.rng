@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--
+    ##############################################################
+    File: nmtypes.rnc
+    Version: $Id$
+    ##############################################################
+  -->
+  <define name="Identifier">
+    <attribute name="id">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <define name="IdReference">
+    <attribute name="idRef">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <define name="Type">
+    <attribute name="type">
+      <data type="string"/>
+    </attribute>
+  </define>
+  <define name="Comment">
+    <element name="comment">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="Description">
+    <element name="description">
+      <data type="string"/>
+    </element>
+  </define>
+  <!--
+    ##############################################################
+    This sequence allows any element, attribute, or text (regardless 
+    of name or namespace) into the document when invoked.
+    ##############################################################
+  -->
+  <define name="anyElement">
+    <element>
+      <anyName/>
+      <ref name="anyThing"/>
+    </element>
+  </define>
+  <define name="anyAttribute">
+    <attribute>
+      <anyName/>
+    </attribute>
+  </define>
+  <define name="anyThing">
+    <zeroOrMore>
+      <choice>
+        <ref name="anyElement"/>
+        <ref name="anyAttribute"/>
+        <text/>
+      </choice>
+    </zeroOrMore>
+  </define>
+  <!-- Base Topology IdReference types -->
+  <define name="TopologyIdRef">
+    <element name="topologyIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="NodeIdRef">
+    <element name="nodeIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="PortIdRef">
+    <element name="portIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="LinkIdRef">
+    <element name="linkIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="PathIdRef">
+    <element name="pathIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="NetworkIdRef">
+    <element name="networkIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="DomainIdRef">
+    <element name="domainIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="GroupIdRef">
+    <element name="groupIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="ServiceIdRef">
+    <element name="serviceIdRef">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="Name">
+    <element name="name">
+      <interleave>
+        <optional>
+          <attribute name="type">
+            <data type="string"/>
+          </attribute>
+        </optional>
+        <data type="string"/>
+      </interleave>
+    </element>
+  </define>
+  <define name="Address">
+    <element name="address">
+      <interleave>
+        <optional>
+          <attribute name="type">
+            <data type="string"/>
+          </attribute>
+        </optional>
+        <data type="string"/>
+      </interleave>
+    </element>
+  </define>
+  <define name="Relation">
+    <element name="relation">
+      <interleave>
+        <attribute name="type">
+          <data type="string"/>
+        </attribute>
+        <zeroOrMore>
+          <ref name="DomainIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="NodeIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="PortIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="LinkIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="PathIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="NetworkIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="ServiceIdRef"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="GroupIdRef"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="Role">
+    <element name="role">
+      <data type="string"/>
+    </element>
+  </define>
+  <define name="Lifetime">
+    <element name="lifetime">
+      <interleave>
+        <ref name="StartTime"/>
+        <optional>
+          <choice>
+            <ref name="EndTime"/>
+            <ref name="Duration"/>
+          </choice>
+        </optional>
+      </interleave>
+    </element>
+  </define>
+  <define name="TimeContent">
+    <interleave>
+      <attribute name="type"/>
+      <data type="string"/>
+    </interleave>
+  </define>
+  <define name="StartTime">
+    <element name="start">
+      <ref name="TimeContent"/>
+    </element>
+  </define>
+  <define name="EndTime">
+    <element name="end">
+      <ref name="TimeContent"/>
+    </element>
+  </define>
+  <define name="Duration">
+    <element name="duration">
+      <interleave>
+        <attribute name="type">
+          <data type="string"/>
+        </attribute>
+        <data type="string"/>
+      </interleave>
+    </element>
+  </define>
+</grammar>

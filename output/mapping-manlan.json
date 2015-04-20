@@ -1,0 +1,42 @@
+{
+  "local": {
+    "nsaId": "urn:ogf:network:manlan.internet2.edu:2013:nsa",
+    "protocolVersion": "application/vnd.ogf.nsi.cs.v2.provider+soap",
+    "serviceType": "http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE",
+    "networkId": "urn:ogf:network:manlan.internet2.edu:2013:",
+    "stps": [
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d3/3:link\u003duslhcnet"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d13/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d15/1:link\u003dal2s"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d3/6:link\u003dperfsonar"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d15/2:link\u003desnet"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d1/6:link\u003dautobahn"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d1/1:link\u003dgeant-lag"
+      },
+      {
+        "stpId": "urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion",
+        "oscarsId": "urn:ogf:network:domain\u003dmanlan.internet2.edu:node\u003dsw.net.manlan.internet2.edu:port\u003d4/3:link\u003dion"
+      }
+    ]
+  }
+}

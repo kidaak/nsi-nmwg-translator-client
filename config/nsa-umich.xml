@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nsa:nsa id="urn:ogf:network:oess.dcn.umnet.umich.edu:2013:nsa" version="2015-04-07T12:12:00Z" expires="2015-02-20T12:12:00Z" xmlns:nsa="http://schemas.ogf.org/nsi/2014/02/discovery/nsa"
+    xmlns:xcard="urn:ietf:params:xml:ns:vcard-4.0">
+    <name>Univ of Michigan OSCARS uPA</name>
+    <softwareVersion>nsibridge-v1</softwareVersion>
+    <adminContact>
+        <xcard:vcard>
+            <xcard:uid>
+                <xcard:uri>urn:uuid:c8cdbb80-dac7-11e3-9c1a-0800200c9a67</xcard:uri>
+            </xcard:uid>
+            <xcard:prodid>
+                <xcard:text>Univ of Michigan - OSCARS NSI Bridge</xcard:text>
+            </xcard:prodid>
+            <xcard:rev>
+                <xcard:timestamp>20140513T195243Z</xcard:timestamp>
+            </xcard:rev>
+            <xcard:kind>
+                <xcard:text>individual</xcard:text>
+            </xcard:kind>
+            <xcard:fn>
+                <xcard:text>Shawn Mckee</xcard:text>
+            </xcard:fn>
+            <xcard:n>
+                <xcard:surname>Shawn</xcard:surname>
+                <xcard:given>Mckee</xcard:given>
+            </xcard:n>
+            <xcard:email>
+                <xcard:text>smckee@umich.edu</xcard:text>
+            </xcard:email>
+        </xcard:vcard>
+    </adminContact>
+    <location>
+        <longitude>-83.73672</longitude>
+        <latitude>42.276844</latitude>
+    </location>
+    <networkId>urn:ogf:network:oess.dcn.umnet.umich.edu:2013:</networkId>
+    <interface>
+        <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
+        <href>https://oess.dcn.umnet.umich.edu:8500/ConnectionService</href>
+        <describedBy>https://oess.dcn.umnet.umich.edu:8500/ConnectionService?wsdl</describedBy>
+    </interface>
+    <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
+    <peersWith>urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
+</nsa:nsa>

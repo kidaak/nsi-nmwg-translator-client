@@ -1,0 +1,30 @@
+{
+  "local": {
+    "nsaId": "urn:ogf:network:caltech.edu:2013:nsa",
+    "protocolVersion": "application/vnd.ogf.nsi.cs.v2.provider+soap",
+    "serviceType": "http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE",
+    "networkId": "urn:ogf:network:caltech.edu:2013:",
+    "stps": [
+      {
+        "stpId": "urn:ogf:network:caltech.edu:2013::CER2024:eth1_24:+",
+        "oscarsId": "urn:ogf:network:domain\u003dcaltech.edu:node\u003dCER2024:port\u003deth1/24:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:caltech.edu:2013::CER2024:eth2_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003dcaltech.edu:node\u003dCER2024:port\u003deth2/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:caltech.edu:2013::CER2024:eth2_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003dcaltech.edu:node\u003dCER2024:port\u003deth2/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:caltech.edu:2013::CER2024:eth2_1:esnet",
+        "oscarsId": "urn:ogf:network:domain\u003dcaltech.edu:node\u003dCER2024:port\u003deth2/1:link\u003desnet"
+      },
+      {
+        "stpId": "urn:ogf:network:caltech.edu:2013::CER2024:eth2_1:al2s",
+        "oscarsId": "urn:ogf:network:domain\u003dcaltech.edu:node\u003dCER2024:port\u003deth2/1:link\u003dal2s"
+      }
+    ]
+  }
+}

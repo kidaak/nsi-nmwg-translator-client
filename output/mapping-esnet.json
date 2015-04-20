@@ -1,0 +1,2806 @@
+{
+  "local": {
+    "nsaId": "urn:ogf:network:es.net:2013:nsa",
+    "protocolVersion": "application/vnd.ogf.nsi.cs.v2.provider+soap",
+    "serviceType": "http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE",
+    "networkId": "urn:ogf:network:es.net:2013:",
+    "stps": [
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-781:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-781:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_jlab_ip-b-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_jlab_ip-b-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-704-9K:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-704-9K:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:10_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003d10/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_denv-frgp(as14041):+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_denv-frgp(as14041):link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_ns-sunn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_ns-sunn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-nnsa-rt1:fe-0_3_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-nnsa-rt1:port\u003dfe-0/3/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_bnl_ip-m_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_bnl_ip-m_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_star-pt1-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_star-pt1-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_elpa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_elpa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_eqx-ash-rt1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_eqx-ash-rt1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:ge-0_2_0:2114",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dge-0/2/0:link\u003d2114"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-0_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-0/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_kans-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_kans-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_sinet-pwave-lax_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_sinet-pwave-lax_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_llnl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_llnl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-2_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-2/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_anl_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_anl_ip-a_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-778-9K:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-778-9K:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_nrel-rt2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_nrel-rt2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_lmsi:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_lmsi:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_sinet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_sinet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_psfc_ip-a_v4v6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_psfc_ip-a_v4v6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:3_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d3/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:5_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d5/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_pppl-rt5_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_pppl-rt5_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-8_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-8/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_onenet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_onenet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_wash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_wash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:xe-5_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dxe-5/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:6_1_1:star-tb1",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d6/1/1:link\u003dstar-tb1"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_ncsa_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_ncsa_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_slac-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_slac-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:fe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dfe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:xe-0_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dxe-0/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-rt2:t3-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-rt2:port\u003dt3-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::srs-rt2:ge-0_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsrs-rt2:port\u003dge-0/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_ornl-rt4_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_ornl-rt4_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_0_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/0/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:xe-2_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dxe-2/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_atla-pt1-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_atla-pt1-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-2_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-2/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_sinet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_sinet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:xe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dxe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:xe-2_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dxe-2/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_cernet-pwave-lax:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_cernet-pwave-lax:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:10_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003d10/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_uchicago_scidmz_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_uchicago_scidmz_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-7_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-7/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_3:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/3:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_chic-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_chic-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:to_ornl-rt4_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003dto_ornl-rt4_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ameslab-rt3:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dameslab-rt3:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl-mr2_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl-mr2_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_newy-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_newy-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_albq-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_albq-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-1_3_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-1/3/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:10_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003d10/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_lns_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_lns_ip-a_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_internet2-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_internet2-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-8_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-8/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_lbl_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_lbl_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_canet-winnapeg:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_canet-winnapeg:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_ameslab-rt3_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_ameslab-rt3_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_uiowa:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_uiowa:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_pppl-rt5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_pppl-rt5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_level3_transit:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_level3_transit:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-ar1:ge-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-ar1:port\u003dge-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sdsc-sdn2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sdsc-sdn2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_max-100g_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_max-100g_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-1_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-1/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-7_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-7/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_anl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_anl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_aws-esnet-pub2_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_aws-esnet-pub2_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_uchicago_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_uchicago_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_sinet_ip4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_sinet_ip4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:10_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d10/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_es-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_cenic-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_cenic-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-7_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-7/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-nnsa-rt1:fe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-nnsa-rt1:port\u003dfe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_denv-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_denv-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_ornl-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_ornl-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_aofa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_aofa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr2:so-10_0_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr2:port\u003dso-10/0/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:10_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003d10/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_aws-esnet-pub1_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_aws-esnet-pub1_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_lhcone_ucsd:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_lhcone_ucsd:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_pppl-rt5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_pppl-rt5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:xe-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dxe-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-0_2_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-0/2/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_nash-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_nash-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_nash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_nash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-8_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-8/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:10_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d10/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:to_ornl-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003dto_ornl-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_newy-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_newy-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:10_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d10/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:10_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003d10/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_geant:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_geant:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr2:xe-1_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr2:port\u003dxe-1/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nrel-rt2:fe-0_3_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnrel-rt2:port\u003dfe-0/3/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_www-mtn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_www-mtn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_denv-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_denv-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:lag-1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dlag-1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_sunn-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_sunn-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_wash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_wash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_0_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/0/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_aofa-gw:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_aofa-gw:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_es-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-513-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-513-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ameslab-rt3:xe-0_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dameslab-rt3:port\u003dxe-0/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-2_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-2/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:6_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d6/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_star-tb1_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_star-tb1_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:10_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003d10/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:1_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003d1/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-7_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-7/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_fnal-mr2_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_fnal-mr2_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_chic-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_chic-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl_ip-a_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-0_2_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-0/2/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_eqx-ash-rt1_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_eqx-ash-rt1_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_bost-cr5_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_bost-cr5_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr2:so-10_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr2:port\u003dso-10/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-nnsa-rt1:fe-0_3_1:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-nnsa-rt1:port\u003dfe-0/3/1:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::srs-rt2:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsrs-rt2:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_nersc-kbase_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_nersc-kbase_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_kans-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_kans-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:8_1_1:caltech",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d8/1/1:link\u003dcaltech"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_i2-ciena-dcn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_i2-ciena-dcn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_geant_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_geant_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wash-ar1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wash-ar1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_hous-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_hous-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:lag-1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dlag-1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:xe-0_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dxe-0/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_kreonet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_kreonet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_0_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/0/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-705:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-705:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_slac-mr2_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_slac-mr2_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_chic-gw:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_chic-gw:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_geant:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_geant:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_lond-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_lond-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_netdb7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_netdb7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_lbl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_lbl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_sunn-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_sunn-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:2_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d2/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_mail-east:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_mail-east:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_lond-pt1_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_lond-pt1_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_ligo_ip-a-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_ligo_ip-a-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:xe-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dxe-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_manlan_canet_montreal:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_manlan_canet_montreal:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:10_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003d10/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-7_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-7/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_fnal-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_fnal-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_csn_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_csn_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_jlab_ip-c-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_jlab_ip-c-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:10_1_12:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003d10/1/12:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_ui_iccn_al2s_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_ui_iccn_al2s_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-2_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-2/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-1_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-1/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_lbl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_lbl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_denv-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_denv-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:xe-1_3_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dxe-1/3/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_star-tb1_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_star-tb1_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_denv-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_denv-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wash-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wash-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:ae0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dae0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:4_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d4/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_cern-513-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_cern-513-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:10_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d10/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:to_ornl_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003dto_ornl_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_hous-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_hous-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_chic-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_chic-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:3_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003d3/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-4_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-4/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-1_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-1/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_ndn_mgt:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_ndn_mgt:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_aofa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_aofa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_slac-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_slac-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_manlan_canet_toronto:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_manlan_canet_toronto:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-1_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-1/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-1_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-1/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:9_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d9/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:xe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dxe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:ae0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dae0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:3_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003d3/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_mail2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_mail2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pnwg-gw:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pnwg-gw:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_cern-272-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_cern-272-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:5_1_1:al2s",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d5/1/1:link\u003dal2s"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_0_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/0/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_ameslab-rt3_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_ameslab-rt3_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:5_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d5/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:to_atla-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003dto_atla-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_lond-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_lond-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_ndn_mgt:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_ndn_mgt:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_bost-cr5_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_bost-cr5_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_ornl-rt4_sdn-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_ornl-rt4_sdn-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_lsvn-cr1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_lsvn-cr1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:8_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d8/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-7_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-7/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-7_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-7/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-2_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-2/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-2_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-2/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nrel-rt2:ge-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnrel-rt2:port\u003dge-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:9_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d9/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ip-0_0_10:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dip-0/0/10:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_opentransit_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_opentransit_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_nash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_nash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-8_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-8/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:7_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d7/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_eqx-chi-rt1_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_eqx-chi-rt1_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-7_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-7/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:7_2_1:al2s",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d7/2/1:link\u003dal2s"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:9_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d9/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_bois-cr1_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_bois-cr1_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_imap3-east:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_imap3-east:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-2_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-2/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:ge-1_0_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dge-1/0/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_hous-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_hous-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_amst-pt1_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_amst-pt1_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:10_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d10/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-1_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-1/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:xe-1_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dxe-1/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:xe-2_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dxe-2/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:ge-1_3_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dge-1/3/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_chic-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_chic-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-ar1:ae0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-ar1:port\u003dae0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_ui-iccn_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_ui-iccn_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:fe-0_3_3:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dfe-0/3/3:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_mail4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_mail4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-513-ixia_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-513-ixia_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_newy-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_newy-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_manlan-mgmt_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_manlan-mgmt_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_eqx-chi-rt1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_eqx-chi-rt1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:5_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003d5/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:4_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d4/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_reannz:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_reannz:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_jgi-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_jgi-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:ge-1_1_3:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dge-1/1/3:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:ge-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dge-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_snla-rt3_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_snla-rt3_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ga-rt2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dga-rt2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-7_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-7/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_cenic_lax-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_cenic_lax-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-lax:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-lax:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-sea:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-sea:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_snll-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_snll-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_fnal-mr3_sdn-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_fnal-mr3_sdn-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:fe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dfe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-3_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-3/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:xe-1_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dxe-1/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pantex-rt2:so-0_3_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpantex-rt2:port\u003dso-0/3/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ameslab-rt3:xe-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dameslab-rt3:port\u003dxe-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-7_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-7/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_amst-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_amst-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::srs-rt2:ge-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsrs-rt2:port\u003dge-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_sacr-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_sacr-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_0_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/0/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_asgc_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_asgc_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-2_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-2/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:1_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003d1/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-0_2_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-0/2/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:xe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dxe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_nersc-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_nersc-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_pnwg-cr5_ip-c:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_pnwg-cr5_ip-c:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:10_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003d10/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_lond-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_lond-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::srs-rt2:fe-0_3_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsrs-rt2:port\u003dfe-0/3/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_aofa-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_aofa-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_gloriad-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_gloriad-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:7_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d7/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_albq-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_albq-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-3_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-3/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_denv-cr5_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_denv-cr5_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_10:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/10:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sinet-pwave-lax:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sinet-pwave-lax:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl-rt3_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl-rt3_ip-a_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-2_3_0:2112",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-2/3/0:link\u003d2112"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sdsc-sdn2:xe-0_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsdsc-sdn2:port\u003dxe-0/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-2_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-2/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_star-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_star-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-2_3_0:2114",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-2/3/0:link\u003d2114"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:xe-3_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dxe-3/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_amst-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_amst-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_denv-cr2_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_denv-cr2_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_hous-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_hous-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:9_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d9/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_chic-pt1-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_chic-pt1-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_nash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_nash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_bois-cr1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_bois-cr1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:10_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003d10/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::osti-rt2:xe-0_0_0:2112",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dosti-rt2:port\u003dxe-0/0/0:link\u003d2112"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-1_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-1/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-7_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-7/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-7_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-7/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_atla-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_atla-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_bost-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_bost-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_0_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/0/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_nash-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_nash-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pantex-rt2:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpantex-rt2:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_doe-in-rmr:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_doe-in-rmr:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_star-ixia-mgt-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_star-ixia-mgt-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-513-gw:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-513-gw:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnldc-rt3:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnldc-rt3:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_lond-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_lond-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-1_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-1/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_internet2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_internet2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-779:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-779:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-2_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-2/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:9_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d9/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_dren:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_dren:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_wiscnet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_wiscnet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_nwu_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_nwu_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_nasa-nisn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_nasa-nisn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_ndn_data:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_ndn_data:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_denv-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_denv-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_nox_ip-a_v4v6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_nox_ip-a_v4v6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-2_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-2/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-272-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-272-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_canet-toronto:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_canet-toronto:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_aofa-sdn1_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_aofa-sdn1_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl-mr3_sdn-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl-mr3_sdn-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr2:xe-0_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr2:port\u003dxe-0/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_startap_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_startap_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_nersc_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_nersc_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_eqx-ash-rt1_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_eqx-ash-rt1_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_atf-hsm-chic:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_atf-hsm-chic:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::forr-rt1:ge-0_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dforr-rt1:port\u003dge-0/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pnnl_ip-a-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pnnl_ip-a-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-9_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-9/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::orau-rt2:ge-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dorau-rt2:port\u003dge-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_mit_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_mit_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_0_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/0/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_elpa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_elpa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:ge-1_1_5:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dge-1/1/5:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_clara_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_clara_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-2_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-2/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_flr_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_flr_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_nersc-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_nersc-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_aofa-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_aofa-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:ge-0_0_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dge-0/0/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_in-gigapop_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_in-gigapop_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_es-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_sacr-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_sacr-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:xe-1_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dxe-1/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_cern-272-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_cern-272-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::srs-rt2:fe-0_3_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsrs-rt2:port\u003dfe-0/3/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_pnwg-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_pnwg-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_1_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/1/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_slac_ip-c:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_slac_ip-c:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_denv-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_denv-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_eqx-sj-rt1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_eqx-sj-rt1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_paix-pa-rt3_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_paix-pa-rt3_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_lbl_ip-f:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_lbl_ip-f:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-0_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-0/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nash-cr5:to_chic-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnash-cr5:port\u003dto_chic-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_newy-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_newy-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_paix-pa_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_paix-pa_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_cern-513-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_cern-513-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:fe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dfe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:ge-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dge-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:2_1_1:manlan",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d2/1/1:link\u003dmanlan"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nrel-rt2:ge-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnrel-rt2:port\u003dge-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_merit:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_merit:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_elpa-cr1_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_elpa-cr1_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_eqx-ash-rt1_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_eqx-ash-rt1_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_sox_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_sox_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nrel-rt2:ge-0_0_0:1606",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnrel-rt2:port\u003dge-0/0/0:link\u003d1606"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-8_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-8/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-2_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-2/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_kcp_ip-c:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_kcp_ip-c:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-7_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-7/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_nasa-nisn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_nasa-nisn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::jgi-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003djgi-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:7_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d7/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:ge-0_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dge-0/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-2_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-2/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_wash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_wash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-513-ixia-mgmt_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-513-ixia-mgmt_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_max_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_max_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_pnwg-cr5_ip-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_pnwg-cr5_ip-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pantex-rt2:ge-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpantex-rt2:port\u003dge-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:ge-1_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dge-1/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_albq-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_albq-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_manlan_internet2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_manlan_internet2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnldc-rt3:ge-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnldc-rt3:port\u003dge-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_mren_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_mren_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bnl-mr2:xe-4_3_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbnl-mr2:port\u003dxe-4/3/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sacr-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sacr-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:10_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003d10/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_www-eng8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_www-eng8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_cern-272-diskpt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_cern-272-diskpt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:5_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d5/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_gloriad_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_gloriad_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_kirtland_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_kirtland_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl-mr2_sdn-b:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl-mr2_sdn-b:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-9_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-9/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_kans-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_kans-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pppl-rt5:ge-0_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpppl-rt5:port\u003dge-0/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_ampath_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_ampath_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_denv-cr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_denv-cr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_elpa-cr1_ip-b:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_elpa-cr1_ip-b:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_kans-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_kans-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sunn-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sunn-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:ge-0_0_1:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dge-0/0/1:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-sea-9k:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-sea-9k:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_snll-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_snll-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ameslab-rt3:xe-1_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dameslab-rt3:port\u003dxe-1/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_sanfordlab_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_sanfordlab_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_elpa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_elpa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_cern_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_cern_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wash-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wash-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::paix-pa-rt3:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpaix-pa-rt3:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-snv:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-snv:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_bost-cr5_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_bost-cr5_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::amst-cr5:to_geant_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003damst-cr5:port\u003dto_geant_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bois-cr1:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbois-cr1:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-0_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-0/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sunn-gw:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sunn-gw:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-0_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-0/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pnnl_ip-b-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pnnl_ip-b-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_kek-pwave-lax-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_kek-pwave-lax-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-ar1:t3-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-ar1:port\u003dt3-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:lag-1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dlag-1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_wash-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_wash-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-lax-9k:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-lax-9k:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:10_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d10/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_ns-star:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_ns-star:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-1_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-1/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_star-ixia_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_star-ixia_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:3_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003d3/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_bnl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_bnl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-7_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-7/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_dren_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_dren_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-8_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-8/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_uwmadison_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_uwmadison_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-2_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-2/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-1_3_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-1/3/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pwave-snv-9k:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pwave-snv-9k:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:6_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d6/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_ns-aoa:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_ns-aoa:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_amst-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_amst-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:2_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d2/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_fnal-mr3_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_fnal-mr3_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-ar1:t3-1_3_1:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-ar1:port\u003dt3-1/3/1:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_internet2-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_internet2-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_nysernet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_nysernet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_llnl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_llnl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:ge-1_0_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dge-1/0/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-2_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-2/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-rt2:ge-0_1_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-rt2:port\u003dge-0/1/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:9_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d9/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:ge-1_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dge-1/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnldc-rt3:t3-0_3_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnldc-rt3:port\u003dt3-0/3/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_i2-ciena-dcn:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_i2-ciena-dcn:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_0_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/0/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_mail3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_mail3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:10_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003d10/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_nrel_ip-b:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_nrel_ip-b:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-0_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-0/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-1_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-1/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_es-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-2_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-2/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_pwave-780-9K:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_pwave-780-9K:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-1_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-1/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_elpa-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_elpa-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-0_0_0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-0/0/0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_2_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/2/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003des-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_tanet2_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_tanet2_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:to_sacr-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003dto_sacr-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::osti-rt2:xe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dosti-rt2:port\u003dxe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_albq-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_albq-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_nordunet:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_nordunet:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:1_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d1/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:5_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d5/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:5_1_1:star-tb1",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d5/1/1:link\u003dstar-tb1"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:to_ornl-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003dto_ornl-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_level3_transit:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_level3_transit:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_atla-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_atla-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:xe-0_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dxe-0/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_lond-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_lond-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sunn-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sunn-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_lanl_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_lanl_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_kans-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_kans-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:6_1_1:wix",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d6/1/1:link\u003dwix"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:to_es-stub:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003dto_es-stub:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:9_2_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d9/2/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:6_2_1:umich",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d6/2/1:link\u003dumich"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::atla-cr5:to_srs-rt2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003datla-cr5:port\u003dto_srs-rt2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-chi-rt1:ge-0_0_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-chi-rt1:port\u003dge-0/0/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::slac-mr2:xe-0_0_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dslac-mr2:port\u003dxe-0/0/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_anl_ip-b_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_anl_ip-b_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_ndn_data:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_ndn_data:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::kans-cr5:to_hous-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dkans-cr5:port\u003dto_hous-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-rt4:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-rt4:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_llnl_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_llnl_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_bost-pt2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_bost-pt2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-8_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-8/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_anl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_anl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-3_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-3/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_aofa-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_aofa-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-1_2_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-1/2/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::denv-cr5:10_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddenv-cr5:port\u003d10/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:ge-1_1_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dge-1/1/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_noc7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_noc7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_pnwg-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_pnwg-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_wix_3rox_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_wix_3rox_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-2_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-2/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-0_2_0:1122",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-0/2/0:link\u003d1122"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-0_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-0/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_cern_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_cern_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:10_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003d10/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_2_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/2/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::bost-cr5:to_mit_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dbost-cr5:port\u003dto_mit_ip-a_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ornl-cr5:10_1_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dornl-cr5:port\u003d10/1/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:to_bnl-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003dto_bnl-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:6_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d6/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::anl-mr2:xe-8_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003danl-mr2:port\u003dxe-8/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pnwg-pt1-v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pnwg-pt1-v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_nasa_nren_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_nasa_nren_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:to_sdsc-pwave:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003dto_sdsc-pwave:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr2:xe-8_1_0:5",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr2:port\u003dxe-8/1/0:link\u003d5"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_cern-513-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_cern-513-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_pnwg-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_pnwg-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_jgi-mr2_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_jgi-mr2_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-1_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-1/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_geant-open_test_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_geant-open_test_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-513-cr5:to_cern-513-pt1_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-513-cr5:port\u003dto_cern-513-pt1_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_0_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/0/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:9_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d9/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-sj-rt1:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-sj-rt1:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:xe-2_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dxe-2/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_usa40net_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_usa40net_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pantex-rt2:ge-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpantex-rt2:port\u003dge-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lond-cr5:to_geant_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlond-cr5:port\u003dto_geant_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_0_7:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/0/7:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snla-rt3:xe-0_0_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnla-rt3:port\u003dxe-0/0/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::cern-272-cr5:to_cern-272-pt1_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dcern-272-cr5:port\u003dto_cern-272-pt1_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::paix-pa-rt3:ae0:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpaix-pa-rt3:port\u003dae0:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lsvn-cr1:ge-1_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlsvn-cr1:port\u003dge-1/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:to_uslhcnet_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003dto_uslhcnet_v4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sunn-cr5:10_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsunn-cr5:port\u003d10/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_abqg_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_abqg_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_2_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/2/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::doe-gtn-rt1:ge-0_2_2:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003ddoe-gtn-rt1:port\u003dge-0/2/2:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_level3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_level3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-2_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-2/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:10_1_9:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003d10/1/9:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnldc-rt3:fe-0_0_3:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnldc-rt3:port\u003dfe-0/0/3:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:3_2_1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d3/2/1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_0_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/0/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::pnwg-cr5:to_denv-cr5_ip-c:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dpnwg-cr5:port\u003dto_denv-cr5_ip-c:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::fnal-mr3:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dfnal-mr3:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::snll-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsnll-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:8_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d8/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::chic-cr5:to_star-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dchic-cr5:port\u003dto_star-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::hous-cr5:10_1_4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dhous-cr5:port\u003d10/1/4:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::albq-cr5:to_llnl_ip-a:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dalbq-cr5:port\u003dto_llnl_ip-a:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::ameslab-rt3:xe-0_2_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dameslab-rt3:port\u003dxe-0/2/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::star-cr5:10_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dstar-cr5:port\u003d10/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:ge-9_1_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dge-9/1/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::aofa-cr5:10_1_8:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003daofa-cr5:port\u003d10/1/8:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:xe-1_3_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dxe-1/3/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::wash-cr5:to_atla-cr5_ip-a:0",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dwash-cr5:port\u003dto_atla-cr5_ip-a:link\u003d0"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::lbl-mr2:xe-0_1_0:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dlbl-mr2:port\u003dxe-0/1/0:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::llnl-mr2:ge-3_1_5:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dllnl-mr2:port\u003dge-3/1/5:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::sacr-cr5:to_sacr-owamp:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dsacr-cr5:port\u003dto_sacr-owamp:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::nersc-mr2:xe-7_3_0:xo-osf-rt1",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnersc-mr2:port\u003dxe-7/3/0:link\u003dxo-osf-rt1"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::eqx-ash-rt1:ge-0_0_6:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003deqx-ash-rt1:port\u003dge-0/0/6:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::elpa-cr5:to_elpa-pt1:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003delpa-cr5:port\u003dto_elpa-pt1:link\u003d*"
+      },
+      {
+        "stpId": "urn:ogf:network:es.net:2013::newy-cr5:to_bnl-rt3_ip-a_v4:+",
+        "oscarsId": "urn:ogf:network:domain\u003des.net:node\u003dnewy-cr5:port\u003dto_bnl-rt3_ip-a_v4:link\u003d*"
+      }
+    ]
+  }
+}

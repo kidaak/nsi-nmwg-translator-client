@@ -1,0 +1,193 @@
+# ##############################################################
+# 
+# File: 	nmtopo_ctrlplane.rnc
+# Version: $Id: nmtopo_ctrlplane.rnc 267 2007-09-14 17:56:01Z swany $
+# 
+# ##############################################################
+
+default namespace CtrlPlane =
+  "http://ogf.org/schema/network/topology/ctrlPlane/20080828/"
+
+include "nmtypes.rnc"
+
+## Definition of the topology element
+start |= element topology { CtrlPlaneTopologyContent }
+
+
+CtrlPlaneTopologyContent =
+ # & Parameters
+  Identifier
+  & element idcId { xsd:string }
+  & (
+    CtrlPlaneDomain |
+    element domainSignature {
+      CtrlPlaneDomainSignatureContent
+    }
+  )*
+
+## this a placeholder until we discuss and experiment with signatures
+CtrlPlaneDomainSignatureContent =
+  attribute domainId { xsd:string }
+  & anyElement
+  
+CtrlPlaneDomain =
+  element domain {
+    Identifier
+    & Lifetime?
+    & ( 
+      CtrlPlaneNode*
+      & CtrlPlanePort*
+      & CtrlPlaneLink*
+    )
+  }
+  
+CtrlPlaneNode =
+  element node {
+    Identifier
+    & Address?
+    & CtrlPlanePort*
+  }
+  
+CtrlPlanePort =
+  element port {
+    Identifier
+    & CtrlPlaneCapacityContent
+    & CtrlPlaneLink*
+  }
+  
+CtrlPlaneLink =
+  element link {
+    Identifier
+    & element remoteLinkId { xsd:string }?
+    & element trafficEngineeringMetric { xsd:string }
+    & CtrlPlaneCapacityContent?
+    & element linkProtectionTypes { xsd:string }*
+    & element administrativeGroups { CtrlPlaneAdministrativeGroup }*
+    & element SwitchingCapabilityDescriptors { CtrlPlaneSwitchingCapabilityDescriptor+ }
+  }
+  
+# Begin path and endpoint additions
+CtrlPlanePath =
+  element path {
+    Identifier
+    & Lifetime?
+    & attribute direction { "upstream" | "downstream" }?
+    & CtrlPlanePathContent 
+  }
+
+# a path consists of a list of hops, and/or links
+CtrlPlanePathContent =
+  element hop { CtrlPlaneHopContent }*
+
+  
+CtrlPlaneHopContent =
+  Identifier
+  & ( 
+    DomainIdRef |
+    NodeIdRef |
+    PortIdRef |
+    LinkIdRef |
+    CtrlPlaneDomain |
+    CtrlPlaneNode |
+    CtrlPlanePort |
+    CtrlPlaneLink
+  )
+  & element nextHop { CtrlPlaneNextHopContent }*
+
+CtrlPlaneNextHopContent = 
+  attribute weight { xsd:integer }?
+  & attribute optional { "true" | "false" }?
+  & xsd:string
+
+CtrlPlaneBidirectionalPath =
+  element bidirectionalPath { CtrlPlaneBidirectionalPathContent }
+
+CtrlPlaneBidirectionalPathContent =
+  Identifier
+  & Lifetime?
+  # We have to do this so that it can be validated using trang/jing and still
+  # have the paths appear in an arbitrary order
+  & (
+        (CtrlPlaneDownstreamPathContent, CtrlPlaneUpstreamPathContent)
+        | (CtrlPlaneUpstreamPathContent, CtrlPlaneDownstreamPathContent)
+    )
+
+CtrlPlaneDownstreamPathContent = 
+  element path {
+    Identifier?
+    & attribute direction { "downstream" }
+    & CtrlPlanePathContent
+  }
+
+CtrlPlaneUpstreamPathContent = 
+  element path {
+    Identifier?
+    & attribute direction { "upstream" }
+    & CtrlPlanePathContent
+  }
+
+# End path and endpoint
+
+CtrlPlaneAdministrativeGroup =
+  element group { xsd:int }
+  & element groupID { xsd:string }?
+  
+CtrlPlaneSwitchingCapabilityDescriptor =
+  element switchingcapType {
+    "psc-1"
+    | "psc-2"
+    | "psc-3"
+    | "psc-4"
+    | "l2sc"
+    | "tdm"
+    | "lsc"
+    | "fsc"
+  }
+  & element encodingType {
+      "packet"
+      | "ethernet"
+      | "pdh"
+      | "sdh/sonet"
+      | "digital wrapper"
+      | "lambda"
+      | "fiber"
+      | "fiberchannel"
+      | xsd:string
+    }
+  & element switchingCapabilitySpecificInfo {
+      CtrlPlaneSwitchingCapabilitySpecificInfo
+    }+
+    
+CtrlPlaneSwitchingCapabilitySpecificInfo =
+  CtrlPlaneSwitchingCapabilitySpecificInfo_psc
+  | CtrlPlaneSwitchingCapabilitySpecificInfo_l2sc
+  | CtrlPlaneSwitchingCapabilitySpecificInfo_tdm
+  | CtrlPlaneSwitchingCapabilitySpecificInfo_lsc
+  | CtrlPlaneSwitchingCapabilitySpecificInfo_fsc
+  
+CtrlPlaneSwitchingCapabilitySpecificInfo_psc =
+  element capability { xsd:string }
+  
+CtrlPlaneSwitchingCapabilitySpecificInfo_tdm =
+  element capability { xsd:string }
+  
+CtrlPlaneSwitchingCapabilitySpecificInfo_lsc =
+  element capability { xsd:string }
+  
+CtrlPlaneSwitchingCapabilitySpecificInfo_fsc =
+  element capability { xsd:string }
+  
+CtrlPlaneSwitchingCapabilitySpecificInfo_l2sc =
+  element interfaceMTU { xsd:int }
+  & element vlanRangeAvailability { xsd:string }
+  & element suggestedVLANRange { xsd:string }?
+  & element vlanTranslation { "true" | "false" }?
+
+## Capacity Description Pattern  
+CtrlPlaneCapacityContent =
+  element capacity { xsd:string }?
+  & element maximumReservableCapacity { xsd:string }?
+  & element minimumReservableCapacity { xsd:string }?
+  & element granularity { xsd:string }?
+  & element unreservedCapacity { xsd:string }?
+  

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nsa:nsa id="urn:ogf:network:manlan.internet2.edu:2013:nsa" version="2015-01-27T12:12:00Z" expires="2016-01-27T12:34:34.701-04:00" xmlns:nsa="http://schemas.ogf.org/nsi/2014/02/discovery/nsa"
+    xmlns:xcard="urn:ietf:params:xml:ns:vcard-4.0">
+    <name>MANLAN OSCARS uPA</name>
+    <softwareVersion>nsibridge-v1</softwareVersion>
+    <adminContact>
+        <xcard:vcard>
+            <xcard:uid>
+                <xcard:uri>urn:uuid:e9953c80-e2b0-11e3-8b68-0800200c9a66</xcard:uri>
+            </xcard:uid>
+            <xcard:prodid>
+                <xcard:text>MANLAN - OSCARS NSI Bridge"</xcard:text>
+            </xcard:prodid>
+            <xcard:rev>
+                <xcard:timestamp>20140523T193200Z</xcard:timestamp>
+            </xcard:rev>
+            <xcard:kind>
+                <xcard:text>individual</xcard:text>
+            </xcard:kind>
+            <xcard:fn>
+                <xcard:text>Dale Finkelson</xcard:text>
+            </xcard:fn>
+            <xcard:n>
+                <xcard:surname>Dale</xcard:surname>
+                <xcard:given>Finkelson</xcard:given>
+            </xcard:n>
+            <xcard:email>
+                <xcard:text>dmf@internet2.edu</xcard:text>
+            </xcard:email>
+        </xcard:vcard>
+    </adminContact>
+    <location>
+        <longitude>-74.003</longitude>
+        <latitude>40.718666</latitude>
+    </location>
+    <networkId>urn:ogf:network:manlan.internet2.edu:2013:</networkId>
+    <interface>
+        <type>application/vnd.ogf.nsi.cs.v2.provider+soap</type>
+        <href>https://oscars.manlan.internet2.edu:8500/ConnectionServiceProvider</href>
+    </interface>
+    <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
+    <peersWith>urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
+</nsa:nsa>

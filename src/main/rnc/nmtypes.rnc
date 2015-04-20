@@ -1,0 +1,122 @@
+# ##############################################################
+# File: nmtypes.rnc
+# Version: $Id$
+# ##############################################################
+
+Identifier =
+        attribute id { xsd:string }
+
+IdReference =
+        attribute idRef { xsd:string }
+
+Type = 
+        attribute type { xsd:string }    
+
+Comment =
+        element comment { xsd:string }
+
+Description =
+        element description { xsd:string }
+
+# ##############################################################
+# This sequence allows any element, attribute, or text (regardless 
+# of name or namespace) into the document when invoked.
+# ##############################################################
+
+anyElement = 
+        element * { 
+                anyThing 
+        }
+
+anyAttribute = 
+        attribute * { text }
+
+anyThing = 
+        ( 
+                anyElement | 
+                anyAttribute | 
+                text 
+        )*
+        
+
+# Base Topology IdReference types
+TopologyIdRef = 
+  element topologyIdRef { xsd:string }
+  
+NodeIdRef =
+  element nodeIdRef { xsd:string }
+
+PortIdRef =
+  element portIdRef { xsd:string }
+  
+LinkIdRef =
+  element linkIdRef { xsd:string }
+  
+PathIdRef = 
+  element pathIdRef { xsd:string }
+        
+NetworkIdRef = 
+  element networkIdRef { xsd:string }
+  
+DomainIdRef = 
+  element domainIdRef { xsd:string }
+
+GroupIdRef = 
+  element groupIdRef { xsd:string }
+
+ServiceIdRef = 
+  element serviceIdRef { xsd:string }
+
+ Name =
+   element name {
+     attribute type { xsd:string }?
+     & xsd:string
+   }
+
+ Address =
+   element address {
+     attribute type { xsd:string }?
+     & xsd:string
+   }
+
+ Relation =
+   element relation {
+     attribute type { xsd:string }
+     & DomainIdRef*
+     & NodeIdRef*
+     & PortIdRef*
+     & LinkIdRef*
+     & PathIdRef*
+     & NetworkIdRef*
+     & ServiceIdRef*
+     & GroupIdRef*
+   }
+
+  Role = 
+    element role { xsd:string }
+
+  Lifetime =
+        element lifetime {
+          StartTime
+          & (EndTime | Duration)?
+        }
+
+TimeContent = 
+        attribute type { text } &
+        xsd:string
+
+StartTime = 
+        element start {
+                TimeContent
+        }
+   
+EndTime = 
+        element end {
+                TimeContent
+        }
+
+Duration =
+        element duration {
+          attribute type { xsd:string }
+          & xsd:string
+        }

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:Topology xmlns:ns2="http://ogf.org/schema/network/topology/ctrlPlane/20080828/" xmlns:ns3="urn:ietf:params:xml:ns:vcard-4.0" xmlns:ns4="http://schemas.ogf.org/nml/2013/05/base#" xmlns:ns5="http://schemas.ogf.org/nsi/2014/02/discovery/types" xmlns:ns6="http://schemas.es.net/nsi/2014/12/topology/translator/configuration" xmlns:ns7="http://schemas.ogf.org/nsi/2014/02/discovery/nsa" xmlns:ns8="http://schemas.ogf.org/nsi/2013/12/services/definition" id="urn:ogf:network:manlan.internet2.edu:2013:" version="2015-04-20T18:10:19.383Z">
+    <ns4:name>manlan.internet2.edu</ns4:name>
+    <ns4:Lifetime>
+        <ns4:start>2015-04-20T18:10:19.383Z</ns4:start>
+        <ns4:end>2015-06-19T18:10:19.383Z</ns4:end>
+    </ns4:Lifetime>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:out"/>
+    </ns4:BidirectionalPort>
+    <ns4:BidirectionalPort id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:in"/>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:out"/>
+    </ns4:BidirectionalPort>
+    <ns8:serviceDefinition id="urn:ogf:network:manlan.internet2.edu:2013::ServiceDefinition:EVTS.A-GOLE">
+        <name>GLIF Automated GOLE Ethernet VLAN Transfer Service</name>
+        <serviceType>http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE</serviceType>
+    </ns8:serviceDefinition>
+    <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasService">
+        <ns4:SwitchingService encoding="http://schemas.ogf.org/nml/2012/10/ethernet" labelSwapping="false" labelType="http://schemas.ogf.org/nml/2012/10/ethernet#vlan" id="urn:ogf:network:manlan.internet2.edu:2013::ServiceDomain:EVTS.A-GOLE">
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:in"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:in"/>
+            </ns4:Relation>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:out"/>
+                <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:out"/>
+            </ns4:Relation>
+            <ns8:serviceDefinition id="urn:ogf:network:manlan.internet2.edu:2013::ServiceDefinition:EVTS.A-GOLE"/>
+        </ns4:SwitchingService>
+    </ns4:Relation>
+    <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasInboundPort">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1800-1819,3160-3179,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:uslhcnet.org:2013::vlsr1:S25855:10.8.6.1:out"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799,3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1125-1164,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:al2s.net.internet2.edu:2013::sdn-sw.newy32aoa.net.internet2.edu:eth1_1:manlan:out"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799,1800-1819,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:es.net:2013::aofa-cr5:2_1_1:manlan:out"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:geant.net:2013:topology:manlan-out"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:in">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+    </ns4:Relation>
+    <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#hasOutboundPort">
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_3:uslhcnet:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1800-1819,3160-3179,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:uslhcnet.org:2013::vlsr1:S25855:10.8.6.1:in"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:13_1:+:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799,3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1125-1164,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:al2s.net.internet2.edu:2013::sdn-sw.newy32aoa.net.internet2.edu:eth1_1:manlan:in"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:3_6:perfsonar:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_2:esnet:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1779-1799,1800-1819,3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:es.net:2013::aofa-cr5:2_1_1:manlan:in"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_6:autobahn:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+            <ns4:Relation type="http://schemas.ogf.org/nml/2013/05/base#isAlias">
+                <ns4:PortGroup id="urn:ogf:network:geant.net:2013:topology:manlan-in"/>
+            </ns4:Relation>
+        </ns4:PortGroup>
+        <ns4:PortGroup id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_3:ion:out">
+            <ns4:LabelGroup labeltype="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">3400-3499</ns4:LabelGroup>
+        </ns4:PortGroup>
+    </ns4:Relation>
+</ns4:Topology>
