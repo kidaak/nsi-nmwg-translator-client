@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:configuration xmlns:tns="http://schemas.es.net/nsi/2014/12/topology/translator/configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://schemas.es.net/nsi/2014/12/topology/translator/configuration file:/Users/hacksaw/src/github/nsi-topology-translator-client/src/main/xsd/Configuration.xsd">
+<tns:configuration xmlns:tns="http://schemas.es.net/nsi/2014/12/topology/translator/configuration">
     <nmwg>
         <baseURL>https://ndb7.net.internet2.edu/TopologyViewer/</baseURL>
         <parameters type="ts_instance">http://dcn-ts.internet2.edu:8012/perfSONAR_PS/services/topology</parameters>
