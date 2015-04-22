@@ -1,6 +1,7 @@
 /target/
 /var/
 /output/
+/bin/
 .classpath
 .project
 .settings/

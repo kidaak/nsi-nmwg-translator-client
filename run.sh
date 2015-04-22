@@ -19,5 +19,6 @@ BASEDIR=`cd "$PRGDIR" >/dev/null; pwd`
 java -Xmx1536m -Djava.net.preferIPv4Stack=true  \
 	-Dbasedir="$BASEDIR" \
 	-Dcom.sun.xml.bind.v2.runtime.JAXBContextImpl.fastBoot=true \
-	-jar target/translator.jar \
+	-jar $PRGDIR/bin/translator.jar \
 	$*
+

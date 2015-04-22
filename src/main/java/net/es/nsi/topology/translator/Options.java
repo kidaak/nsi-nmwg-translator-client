@@ -18,13 +18,13 @@ import org.apache.commons.cli.ParseException;
 
 /**
  * Translator runtime configuration options specified as command line options.
- * 
+ *
  * @author hacksaw
  */
 public class Options {
     // Help line.
     private static final String COMMAND_LINE = "java -jar translator.jar [-basedir <application directory>] [-configdir <configDir>] [-configfile <filename>] [-debug]";
-    
+
     // Command line arguments.
     private static final String ARGNAME_BASEDIR = "basedir";
     private static final String ARGNAME_CONFIGDIR = "configdir";
@@ -35,13 +35,13 @@ public class Options {
     private static final String DEFAULT_CONFIGDIR = "config/";
     private static final String DEFAULT_CONFIGFILE = "config.xml";
     private static final String DEFAULT_LOGF4J = "log4j.xml";
-    
+
     // Runtime values.
     private String basedir;
     private String configdir;
     private String configfile;
     private boolean debug;
-    
+
     /**
      * Process any command line arguments and set up associated system
      * properties for runtime components.
@@ -58,7 +58,7 @@ public class Options {
             // Parse the command line options.
             CommandLineParser parser = new GnuParser();
             CommandLine cmd = parser.parse(options, args);
-            
+
             // Get the application base directory.
             basedir = getBasedir(cmd);
             System.setProperty(Properties.SYSTEM_PROPERTY_BASEDIR, basedir);
@@ -70,12 +70,12 @@ public class Options {
             // See if the user overrode the default location of the configuration file.
             configfile = getConfigFile(cmd);
             System.setProperty(Properties.SYSTEM_PROPERTY_CONFIGFILE, configfile);
-            
+
             // See if we need to enable protocol tracing.
             debug = getDebug(cmd);
             System.setProperty(Properties.SYSTEM_PROPERTY_DEBUG, Boolean.toString(debug));
         } catch (IOException | ParseException pe) {
-            System.err.println("You did not provide the correct arguments, see usage below.");
+            System.err.println("You did not provide the correct arguments, see usage below.\n");
             HelpFormatter formatter = new HelpFormatter();
             formatter.printHelp(COMMAND_LINE, options);
             throw pe;
@@ -91,25 +91,25 @@ public class Options {
         // Create Options object to hold our command line options.
         org.apache.commons.cli.Options options = new org.apache.commons.cli.Options();
 
-        Option basedirOption = new Option(ARGNAME_BASEDIR, true, "The runtime home directory for the application (defaults to \"user.dir\")");
+        Option basedirOption = new Option(ARGNAME_BASEDIR, true, "The runtime home directory for the application (defaults to \"user.dir\").");
         basedirOption.setRequired(false);
         options.addOption(basedirOption);
-        
-        Option configdirOption = new Option(ARGNAME_CONFIGDIR, true, "Location of configuration directory (defaults to ./config)");
+
+        Option configdirOption = new Option(ARGNAME_CONFIGDIR, true, "Location of configuration directory (defaults to ./config).");
         configdirOption.setRequired(false);
         options.addOption(configdirOption);
 
-        Option configfileOption = new Option(ARGNAME_CONFIGFILE, true, "Path to the translation configuration file");
+        Option configfileOption = new Option(ARGNAME_CONFIGFILE, true, "Path to the translation configuration file.");
         configfileOption.setRequired(false);
         options.addOption(configfileOption);
-        
-        Option debugOption = new Option(ARGNAME_DEBUG, false, "If specified enables debug tracing in Jersey");
+
+        Option debugOption = new Option(ARGNAME_DEBUG, false, "If specified enables debug tracing in Jersey.");
         debugOption.setRequired(false);
         options.addOption(debugOption);
 
         return options;
     }
-    
+
     /**
      * Processes the "basedir" command line and system property option.
      *
@@ -128,7 +128,7 @@ public class Options {
         try {
             dir = Paths.get(dir).toRealPath().toString();
         } catch (IOException ex) {
-            System.err.println("Base directory not found " + dir);
+            System.err.println("Error: Base directory not found " + dir + "\n");
             throw ex;
         }
 
@@ -145,18 +145,22 @@ public class Options {
     private String getConfigdir(CommandLine cmd) throws IOException {
         String dir = System.getProperty(Properties.SYSTEM_PROPERTY_CONFIGDIR);
         dir = cmd.getOptionValue(ARGNAME_CONFIGDIR, dir);
+
         Path configPath;
         if(dir == null || dir.isEmpty()) {
             configPath = Paths.get(basedir, DEFAULT_CONFIGDIR);
         }
         else {
             configPath = Paths.get(dir);
+            if (!configPath.isAbsolute()) {
+                configPath = Paths.get(basedir, configPath.toString());
+            }
         }
 
         try {
             dir = configPath.toRealPath().toString();
         } catch (IOException ex) {
-            System.err.println("Configuration directory not found " + dir);
+            System.err.println("Error: Configuration directory not found " + dir + "\n");
             throw ex;
         }
 
@@ -165,7 +169,7 @@ public class Options {
 
     /**
      * Processes the "configfile" command line and system property option.
-     * 
+     *
      * @param cmd Commands entered by the user.
      * @param configdir The application configuration directory.
      * @return The configuration file path.
@@ -174,27 +178,33 @@ public class Options {
     private String getConfigFile(CommandLine cmd) throws IOException {
         String file = System.getProperty(Properties.SYSTEM_PROPERTY_CONFIGFILE);
         file = cmd.getOptionValue(ARGNAME_CONFIGFILE, file);
+
+        System.out.println("file=" + file);
+
         Path path;
         if (Strings.isNullOrEmpty(file)) {
-            path = Paths.get(configdir, DEFAULT_CONFIGFILE);
+            path = Paths.get(basedir, DEFAULT_CONFIGFILE);
         }
         else {
             path = Paths.get(file);
+            if (!path.isAbsolute()) {
+                path = Paths.get(basedir, path.toString());
+            }
         }
 
         try {
             file = path.toRealPath().toString();
         } catch (IOException ex) {
-            System.err.println("Configuration file not found " + path.toString());
+            System.err.println("Error: Configuration file not found " + path.toString() + "\n");
             throw ex;
         }
 
         return file;
     }
-    
+
     /**
      * Process the "debug" command line and system property option.
-     * 
+     *
      * @param cmd Commands entered by the user.
      * @return true if debug is enabled, false otherwise.
      */
@@ -206,7 +216,7 @@ public class Options {
 
     /**
      * Get the Log4J configuration file.
-     * 
+     *
      * @return Log4J configuration file.
      * @throws IOException If path to configuration files is invalid.
      */
@@ -224,11 +234,11 @@ public class Options {
         }
 
         return realPath.toString();
-    }    
+    }
 
     /**
      * Get the base directory property.
-     * 
+     *
      * @return the basedir
      */
     public String getBasedir() {
@@ -237,7 +247,7 @@ public class Options {
 
     /**
      * Set the base directory property.
-     * 
+     *
      * @param basedir the basedir to set
      */
     public void setBasedir(String basedir) {
@@ -246,7 +256,7 @@ public class Options {
 
     /**
      * Get the configuration directory property.
-     * 
+     *
      * @return the configdir
      */
     public String getConfigdir() {
@@ -255,7 +265,7 @@ public class Options {
 
     /**
      * Set the configuration directory property.
-     * 
+     *
      * @param configdir the configdir to set
      */
     public void setConfigdir(String configdir) {
@@ -264,7 +274,7 @@ public class Options {
 
     /**
      * Get the configuration file property.
-     * 
+     *
      * @return the configfile
      */
     public String getConfigfile() {
@@ -273,16 +283,16 @@ public class Options {
 
     /**
      * Set the configuration file property.
-     * 
+     *
      * @param configfile the file to set
      */
     public void setConfigfile(String configfile) {
         this.configfile = configfile;
     }
-    
+
     /**
      * Is debug enabled?
-     * 
+     *
      * @return the debug
      */
     public boolean isDebug() {
@@ -291,7 +301,7 @@ public class Options {
 
     /**
      * Set debug status.
-     * 
+     *
      * @param debug the debug to set
      */
     public void setDebug(boolean debug) {
