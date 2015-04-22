@@ -179,8 +179,6 @@ public class Options {
         String file = System.getProperty(Properties.SYSTEM_PROPERTY_CONFIGFILE);
         file = cmd.getOptionValue(ARGNAME_CONFIGFILE, file);
 
-        System.out.println("file=" + file);
-
         Path path;
         if (Strings.isNullOrEmpty(file)) {
             path = Paths.get(basedir, DEFAULT_CONFIGFILE);
