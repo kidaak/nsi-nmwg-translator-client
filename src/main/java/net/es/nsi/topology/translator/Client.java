@@ -9,14 +9,13 @@ import java.security.cert.CertificateException;
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import org.apache.commons.cli.ParseException;
-
 import org.apache.log4j.xml.DOMConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * The NMWG to NML translator client.
- * 
+ *
  * @author hacksaw
  */
 public class Client {
@@ -24,8 +23,8 @@ public class Client {
 
     /**
      * Configures the runtime and executes the main NMWG to NML translation workflow.
-     * 
-     * @param args 
+     *
+     * @param args
      */
     public static void main(String[] args) {
         // Load the command line options into appropriate system properties.
@@ -46,14 +45,14 @@ public class Client {
         catch (IOException ex) {
             System.err.println("Exiting: could not configure Log4J" + ex.getMessage());
             return;
-        }        
-        
+        }
+
         // Orchestrate the primary uPA NMWG to NML workflow.
         Orchestrator orchestrator = new Orchestrator(options.getBasedir(), options.getConfigfile());
         try {
             orchestrator.orchestrate();
         } catch (JAXBException | IOException | DatatypeConfigurationException | IllegalArgumentException | KeyStoreException | NoSuchAlgorithmException | CertificateException | KeyManagementException | UnrecoverableKeyException ex) {
-            System.err.println("Exiting: Orchestration failed" + ex.getMessage());
+            log.error("Exiting: Orchestration failed.", ex.getMessage());
         }
     }
 }
