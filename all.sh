@@ -22,4 +22,5 @@ $BASEDIR/run.sh -basedir $BASEDIR -configfile config/config-esnet.xml
 $BASEDIR/run.sh -basedir $BASEDIR -configfile config/config-manlan.xml
 $BASEDIR/run.sh -basedir $BASEDIR -configfile config/config-caltech.xml
 $BASEDIR/run.sh -basedir $BASEDIR -configfile config/config-umich.xml
+$BASEDIR/run.sh -basedir $BASEDIR -configfile config/config-wix.xml
 
