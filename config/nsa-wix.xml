@@ -30,8 +30,8 @@
         </xcard:vcard>
     </adminContact>
     <location>
-        <longitude>-76.9219714</longitude>
-        <latitude>38.9709414</latitude>
+        <longitude>-77.2116</longitude>
+        <latitude>38.92</latitude>
     </location>
     <networkId>urn:ogf:network:wix.internet2.edu:2013:</networkId>
     <interface>
