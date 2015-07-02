@@ -34,7 +34,7 @@
     <peering id="urn:ogf:network:es.net:2013::amst-cr5:3_1_1:+">
         <inbound>urn:ogf:network:netherlight.net:2013:production7:esnet-out</inbound>
         <outbound>urn:ogf:network:netherlight.net:2013:production7:esnet-in</outbound>
-        <labels type="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1770-1790</labels>
+        <labels type="http://schemas.ogf.org/nml/2012/10/ethernet#vlan">1000-1019</labels>
     </peering>
     <peering id="urn:ogf:network:es.net:2013::star-cr5:10_1_8:+">
         <inbound>urn:ogf:network:icair.org:2013:topology:esnet-out</inbound>

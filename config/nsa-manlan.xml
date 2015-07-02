@@ -39,5 +39,5 @@
         <href>https://oscars.manlan.internet2.edu:8500/ConnectionServiceProvider</href>
     </interface>
     <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
-    <peersWith>urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
+    <peersWith role="PA">urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
 </nsa:nsa>
