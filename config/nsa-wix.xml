@@ -39,5 +39,6 @@
         <href>https://oscars.wix.internet2.edu:8500/ConnectionServiceProvider</href>
     </interface>
     <feature type="vnd.ogf.nsi.cs.v2.role.uPA"/>
+    <feature type="org.ogf.nsi.cs.v2.commitTimeout">300</feature>
     <peersWith role="PA">urn:ogf:network:es.net:2013:nsa:nsi-aggr-west</peersWith>
 </nsa:nsa>
