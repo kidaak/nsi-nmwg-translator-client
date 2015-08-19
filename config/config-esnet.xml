@@ -40,6 +40,10 @@
         <inbound>urn:ogf:network:icair.org:2013:topology:esnet-out</inbound>
         <outbound>urn:ogf:network:icair.org:2013:topology:esnet-in</outbound>
     </peering>
+    <peering id="urn:ogf:network:es.net:2013::star-cr5:6_2_1:umich">
+        <inbound>urn:ogf:network:oess.dcn.umnet.umich.edu:2013::f10-dynes.dcn.umnet.umich.edu:Te0_20:esnet:out</inbound>
+        <outbound>urn:ogf:network:oess.dcn.umnet.umich.edu:2013::f10-dynes.dcn.umnet.umich.edu:Te0_20:esnet:in</outbound>
+    </peering>
     <client production="true">
         <keyStore type="JKS">
             <file>config/keystore.jks</file>
