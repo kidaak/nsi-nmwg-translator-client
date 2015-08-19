@@ -30,6 +30,9 @@
         <include>sunn-cr5:8_1_1:caltech</include>
         <include>star-cr5:6_2_1:umich</include>
         <include>amst-cr5:3_1_1</include>
+        <include>lbl-mr2:xe-0_1_0</include>
+        <include>sacr-cr5:10_1_4</include>
+        <include>denv-cr5:10_1_11</include>
     </serviceDefintion>
     <peering id="urn:ogf:network:es.net:2013::amst-cr5:3_1_1:+">
         <inbound>urn:ogf:network:netherlight.net:2013:production7:esnet-1-out</inbound>
