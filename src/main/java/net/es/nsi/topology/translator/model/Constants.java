@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * Constants used by the NMWG to NML translator.
- * 
+ *
  * @author hacksaw
  */
 public class Constants {
@@ -32,7 +32,7 @@ public class Constants {
     // Default A-GOLE EVTS Service Definition.
     public static final String SD_EVTS_AGOLE_ID = "EVTS.A-GOLE";
     public static final String SD_EVTS_AGOLE_NAME = "GLIF Automated GOLE Ethernet VLAN Transfer Service";
-    public static final String SD_EVTS_AGOLE_TYPE = "http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE";
+    public static final String SD_EVTS_AGOLE_TYPE = "http://services.ogf.org/nsi/2013/12/definitions/EVTS.A-GOLE";
 
     public static final String LOCAL_CLIENT_PORT = NSI_URN_OGF_NETWORK + "*" + NSI_URN_SEPARATOR + NSI_URN_DOMAIN_YEAR + NSI_URN_SEPARATOR;
 

@@ -14,7 +14,7 @@
         <encoding>http://schemas.ogf.org/nml/2012/10/ethernet</encoding>
         <labelSwapping>false</labelSwapping>
         <labelType>http://schemas.ogf.org/nml/2012/10/ethernet#vlan</labelType>
-        <serviceType>http://services.ogf.org/nsi/2013/07/definitions/EVTS.A-GOLE</serviceType>
+        <serviceType>http://services.ogf.org/nsi/2013/12/definitions/EVTS.A-GOLE</serviceType>
     </serviceDefintion>
     <peering id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:4_5:+">
         <inbound>urn:ogf:network:netherlight.net:2013:production7:manlan:1-out</inbound>
