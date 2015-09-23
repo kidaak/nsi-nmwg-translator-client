@@ -76,7 +76,7 @@ The following XML document controls the runtime configuration.
         <encoding>http://schemas.ogf.org/nml/2012/10/ethernet</encoding>
         <labelSwapping>true</labelSwapping>
         <labelType>http://schemas.ogf.org/nml/2012/10/ethernet#vlan</labelType>
-        <serviceType>http://services.ogf.org/nsi/2013/12/definitions/EVTS.A-GOLE</serviceType>
+        <serviceType>http://services.ogf.org/nsi/2013/12/descriptions/EVTS.A-GOLE</serviceType>
 
         <!-- [Optional] Include ports in output based on the following substring matches. Default is to include all ports. -->
         <include>bnl-</include>

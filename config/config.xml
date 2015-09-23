@@ -14,7 +14,7 @@
         <encoding>http://schemas.ogf.org/nml/2012/10/ethernet</encoding>
         <labelSwapping>true</labelSwapping>
         <labelType>http://schemas.ogf.org/nml/2012/10/ethernet#vlan</labelType>
-        <serviceType>http://services.ogf.org/nsi/2013/12/definitions/EVTS.A-GOLE</serviceType>
+        <serviceType>http://services.ogf.org/nsi/2013/12/descriptions/EVTS.A-GOLE</serviceType>
         <include>bnl-</include>
         <include>fnal-</include>
         <include>manlan</include>
