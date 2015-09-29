@@ -20,6 +20,10 @@
         <inbound>urn:ogf:network:netherlight.net:2013:production7:manlan:1-out</inbound>
         <outbound>urn:ogf:network:netherlight.net:2013:production7:manlan:1-in</outbound>
     </peering>
+    <peering id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:15_1:al2s">
+        <inbound>urn:ogf:network:icair.org:2013:topology:manlan-out</inbound>
+        <outbound>urn:ogf:network:icair.org:2013:topology:manlan-in</outbound>
+    </peering>
     <peering id="urn:ogf:network:manlan.internet2.edu:2013::sw.net.manlan.internet2.edu:1_1:geant-lag">
         <inbound>urn:ogf:network:geant.net:2013:topology:manlan-out</inbound>
         <outbound>urn:ogf:network:geant.net:2013:topology:manlan-in</outbound>
