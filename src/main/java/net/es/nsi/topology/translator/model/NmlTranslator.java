@@ -1,6 +1,5 @@
 package net.es.nsi.topology.translator.model;
 
-import net.es.nsi.topology.translator.utilities.NsiUtilities;
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 import java.util.ArrayList;
@@ -22,13 +21,17 @@ import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyRelationType;
 import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyType;
 import net.es.nsi.topology.translator.jaxb.dds.NsiServiceDefinitionType;
 import net.es.nsi.topology.translator.jaxb.dds.ObjectFactory;
+import net.es.nsi.topology.translator.utilities.NsiUtilities;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Converts the NMWG topology to an equivalent NSI/NML topology representation.
- * 
+ *
  * @author hacksaw
  */
 public class NmlTranslator {
+    private final Logger log = LoggerFactory.getLogger(getClass());
     private final ObjectFactory factory = new ObjectFactory();
 
     // Direction of the port.
@@ -40,7 +43,7 @@ public class NmlTranslator {
     /**
      * Convert the NMWG topology to NSI/NML topology based on provided
      * configuration information.
-     * 
+     *
      * @param domain NMWG domain object for conversion.
      * @param lifetime the lifetime of the generated document in seconds.
      * @param serviceDefinitions the service definitions used to build the NML switching service.
@@ -97,7 +100,7 @@ public class NmlTranslator {
             // Determine which SwitchingService elements this link can
             // potentially match.
             List<NmlSwitchingServiceType> ssList = match(link.getId(), sdList);
-            
+
             // Now we create the Bidirectional port groups and unidirectional
             // relations for all ENNI and UNI links.
             if (!ssList.isEmpty() && (link.getLinkType() == CtrlLinkType.ENNI ||
@@ -136,10 +139,12 @@ public class NmlTranslator {
                 for (NmlSwitchingServiceType ss : ssList) {
                     // We need to determine how a port matches a SwitchingService.
                     for (NmlSwitchingServiceRelationType relation : ss.getRelation()) {
-                        if (relation.getType().contentEquals(Constants.NML_PORT_INBOUND)) {
+                        if (relation.getType().contentEquals(Constants.NML_PORT_INBOUND) &&
+                                ss.getEncoding().equalsIgnoreCase(inPort.get().getEncoding())) {
                             relation.getPortGroup().add(in);
                         }
-                        else if (relation.getType().contentEquals(Constants.NML_PORT_OUTBOUND)) {
+                        else if (relation.getType().contentEquals(Constants.NML_PORT_OUTBOUND) &&
+                                ss.getEncoding().equalsIgnoreCase(outPort.get().getEncoding())) {
                             relation.getPortGroup().add(out);
                         }
                     }
@@ -152,7 +157,7 @@ public class NmlTranslator {
 
     /**
      * Create the NSI service definition.
-     * 
+     *
      * @param networdId create a service domain as a member of this network.
      * @param serviceDefinitions The service definition configuration information used to generate the NML ServiceDefinition.
      * @return The JAXB encoded ServiceDefinition objects.
@@ -173,10 +178,10 @@ public class NmlTranslator {
     }
 
     /**
-     * Create a NML SwitchingService for each ServiceDefintion and create a 
+     * Create a NML SwitchingService for each ServiceDefintion and create a
      * mapping between the NSI ServiceDefintion and NML Switching service.
-     * 
-     * @param networkId NML SwitchingService is a member of this network. 
+     *
+     * @param networkId NML SwitchingService is a member of this network.
      * @param serviceDefinitions the NSI ServiceDefinitions used to generate the SwitchingService.
      * @return the list of ServiceDefinition/SwitchingService mappings.
      */
@@ -220,7 +225,7 @@ public class NmlTranslator {
 
     /**
      * Generate an NML unidirectional PortGroup for the specified NMWG link.
-     * 
+     *
      * @param link the NMWG link to convert.
      * @param direction the direction of the port.
      * @param peer The peer isAlias configuration information.
@@ -238,7 +243,7 @@ public class NmlTranslator {
                 link.getLinkType() == CtrlLinkType.UNKNOWN) {
             // We need to model this link so create the containing port group.
             port = factory.createNmlPortGroupType();
-            
+
             // Are we creating an inbound or outbound NML port relation?
             if (direction == Direction.INBOUND) {
                 port.setId(NsiUtilities.getInboundPort(link.getId()));
@@ -260,6 +265,12 @@ public class NmlTranslator {
                 labelGroupType.setValue(link.getVlanRangeAvailability().get());
                 port.getLabelGroup().add(labelGroupType);
             }
+
+            // Add the encoding type for the port.
+            port.setEncoding(NsiUtilities.getEncodingType(link.getEncodingType()));
+
+            // Add bandwitdh metrics.
+            port.getAny().addAll(createCtrElements(link));
 
             // We add isAlias information if this is an ENNI link, or if there
             // is specific configuration information asking us to do so.
@@ -291,10 +302,61 @@ public class NmlTranslator {
         return Optional.fromNullable(port);
     }
 
+    private List<Object> createCtrElements(CtrlLink link) {
+        List<Object> any = new ArrayList<>();
+
+        // Add the maximum reservable capacity if set.
+        try {
+            Optional<String> maximumReservableCapacity = link.getMaximumReservableCapacity();
+            if (maximumReservableCapacity.isPresent()) {
+                Long max = Long.parseUnsignedLong(maximumReservableCapacity.get());
+                any.add(factory.createMaximumReservableCapacity(max));
+            }
+        }
+        catch (NumberFormatException nfe) {
+            log.error("maximumReservableCapacity is present for " + link.getId() + " but not a valid long value " + link.getMaximumReservableCapacity().get());
+        }
+
+        try {
+            Optional<String> minimumReservableCapacity = link.getMinimumReservableCapacity();
+            if (minimumReservableCapacity.isPresent()) {
+                Long min = Long.parseUnsignedLong(minimumReservableCapacity.get());
+                any.add(factory.createMinimumReservableCapacity(min));
+            }
+        }
+        catch (NumberFormatException nfe) {
+            log.error("minimumReservableCapacity is present for " + link.getId() + " but not a valid long value " + link.getMinimumReservableCapacity().get());
+        }
+
+        try {
+            Optional<String> capacity = link.getCapacity();
+            if (capacity.isPresent()) {
+                Long cap = Long.parseUnsignedLong(capacity.get());
+                any.add(factory.createCapacity(cap));
+            }
+        }
+        catch (NumberFormatException nfe) {
+            log.error("Capacity is present for " + link.getId() + " but not a valid long value " + link.getCapacity().get());
+        }
+
+        try {
+            Optional<String> granularity = link.getGranularity();
+            if (granularity.isPresent()) {
+                Long gran = Long.parseUnsignedLong(granularity.get());
+                any.add(factory.createGranularity(gran));
+            }
+        }
+        catch (NumberFormatException nfe) {
+            log.error("Granularity is present for " + link.getId() + " but not a valid long value " + link.getGranularity().get());
+        }
+
+        return any;
+    }
+
     /**
-     * 
+     *
      * @param id
-     * @return 
+     * @return
      */
     private NmlPortGroupRelationType getNmlIsAlias(String id) {
 
@@ -309,16 +371,16 @@ public class NmlTranslator {
 
         return isAlias;
     }
-    
+
     /**
-     * 
+     *
      * @param id
      * @param sdList
-     * @return 
+     * @return
      */
     private List<NmlSwitchingServiceType> match(String id, List<ServiceDefinitionMap> sdList) {
         List<NmlSwitchingServiceType> result = new ArrayList<>();
-        
+
         for (ServiceDefinitionMap sd : sdList) {
             boolean match = false;
             List<String> includes = sd.getServiceDefinition().getInclude();
@@ -343,12 +405,12 @@ public class NmlTranslator {
                     }
                 }
             }
-            
+
             if (match) {
                 result.add(sd.getSwitchingService());
             }
         }
-        
+
         return result;
     }
 }

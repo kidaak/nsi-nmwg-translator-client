@@ -1,26 +1,28 @@
 package net.es.nsi.topology.translator.utilities;
 
+import com.google.common.base.Optional;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import net.es.nsi.topology.translator.model.Transform;
+import net.es.nsi.topology.translator.jaxb.dds.EthEncodingTypes;
 import net.es.nsi.topology.translator.model.Constants;
+import net.es.nsi.topology.translator.model.Transform;
 
 /**
  * A set of utilities for manipulating NMWG and NML XML elements.
- * 
+ *
  * @author hacksaw
  */
 public class NsiUtilities {
 
     /**
      * Convert an NMWG identifier to the equivalent NML identifier.
-     * 
+     *
      * @param id NMWG identifier to convert.
      * @return Equivalent NML identifier.
-     * @throws IllegalArgumentException 
+     * @throws IllegalArgumentException
      */
     public static String normalizeId(String id) throws IllegalArgumentException {
         // Trim the identifier just in case the XML was improperly formatted.
@@ -91,7 +93,7 @@ public class NsiUtilities {
 
     /**
      * Append input port identifier to provided root NML port identifier.
-     * 
+     *
      * @param id NML port identifier.
      * @return input NML port identifier.
      */
@@ -101,10 +103,10 @@ public class NsiUtilities {
         sb.append(Constants.NSI_STPID_EXTENSION_PORT_IN);
         return sb.toString();
     }
-    
+
     /**
      * Append output port identifier to provided root NML port identifier.
-     * 
+     *
      * @param id NML port identifier.
      * @return output NML port identifier.
      */
@@ -117,7 +119,7 @@ public class NsiUtilities {
 
     /**
      * Build an NSI ServiceDefinition identifier from provided networkId.
-     * 
+     *
      * @param networkId The Network identifier to use as a root for the ServiceDefinition identifier.
      * @param id The name of the ServiceDefinition.
      * @return The new NSI ServiceDefinition identifier.
@@ -133,7 +135,7 @@ public class NsiUtilities {
 
     /**
      * Build an NML SwitchingService identifier from provided networkId.
-     * 
+     *
      * @param networkId The Network identifier to use as a root for the SwitchingService identifier.
      * @param id The name of the SwitchingService.
      * @return The new NSI ServiceDefinition identifier.
@@ -149,9 +151,9 @@ public class NsiUtilities {
 
     /**
      * Return the current time based on GMT time zone.
-     * 
+     *
      * @return The current time relative to GMT.
-     * @throws DatatypeConfigurationException 
+     * @throws DatatypeConfigurationException
      */
     public static XMLGregorianCalendar xmlGregorianCalendar() throws DatatypeConfigurationException {
         GregorianCalendar cal = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
@@ -160,10 +162,10 @@ public class NsiUtilities {
 
     /**
      * Return the time in GMT time zone based on provided millisecond time.
-     * 
+     *
      * @param time Millisecond time.
      * @return Time relative to GMT.
-     * @throws DatatypeConfigurationException 
+     * @throws DatatypeConfigurationException
      */
     public static XMLGregorianCalendar longToXMLGregorianCalendar(long time) throws DatatypeConfigurationException {
         if (time <= 0) {
@@ -174,5 +176,13 @@ public class NsiUtilities {
         cal.setTimeInMillis(time);
         XMLGregorianCalendar newXMLGregorianCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(cal);
         return newXMLGregorianCalendar;
+    }
+
+    public static String getEncodingType(Optional<String> encodingType) {
+        if (encodingType.isPresent() && encodingType.get().trim().equalsIgnoreCase("packet")) {
+            return EthEncodingTypes.HTTP_SCHEMAS_OGF_ORG_NML_2012_10_ETHERNET.value();
+        }
+
+        return "unknown";
     }
 }

@@ -200,7 +200,7 @@
                         <bindingDirectory>${basedir}/src/main/xsd</bindingDirectory>
                         <bindingFiles>dds.xjb</bindingFiles>
                         <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
-                        <schemaFiles>ogf_nsi_discovery_protocol_v1_0.xsd, nmlbase.xsd, ogf_nsi_services_definition_v2_0.xsd, ogf_nsi_discovery_nsa_v1_0.xsd, xCard.xsd</schemaFiles>
+                        <schemaFiles>ogf_nsi_discovery_protocol_v1_0.xsd, nmlbase.xsd, nml-ethernet.xsd, ogf_nsi_services_definition_v2_0.xsd, ogf_nsi_discovery_nsa_v1_0.xsd, xCard.xsd</schemaFiles>
                         <packageName>net.es.nsi.topology.translator.jaxb.dds</packageName>
                         <clearOutputDir>false</clearOutputDir>
                     </configuration>

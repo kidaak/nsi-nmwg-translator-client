@@ -4,11 +4,6 @@
  */
 package net.es.nsi.topology.translator.model;
 
-import net.es.nsi.topology.translator.gson.StpType;
-import net.es.nsi.topology.translator.utilities.NsiUtilities;
-import net.es.nsi.topology.translator.http.RestClient;
-import net.es.nsi.topology.translator.http.HttpsConfig;
-import net.es.nsi.topology.translator.jaxb.JaxbParser;
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 import java.io.IOException;
@@ -29,10 +24,14 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
-import net.es.nsi.topology.translator.jaxb.configuration.SourceType;
+import net.es.nsi.topology.translator.gson.StpType;
+import net.es.nsi.topology.translator.http.HttpsConfig;
+import net.es.nsi.topology.translator.http.RestClient;
+import net.es.nsi.topology.translator.jaxb.JaxbParser;
 import net.es.nsi.topology.translator.jaxb.configuration.ParameterType;
 import net.es.nsi.topology.translator.jaxb.configuration.PeeringType;
 import net.es.nsi.topology.translator.jaxb.configuration.ServiceDefinitionType;
+import net.es.nsi.topology.translator.jaxb.configuration.SourceType;
 import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyType;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneDomainContent;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneLinkContent;
@@ -41,6 +40,7 @@ import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlanePortContent;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneSwcapContent;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneSwitchingCapabilitySpecificInfo;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneTopologyContent;
+import net.es.nsi.topology.translator.utilities.NsiUtilities;
 import org.glassfish.jersey.client.ChunkedInput;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,20 +61,20 @@ public class NmwgTopology {
     private static final String CTRLPLANE_TOPOLOGY_START = "<CtrlPlane:topology xmlns:CtrlPlane=\"http://ogf.org/schema/network/topology/ctrlPlane/20080828/\">";
     private static final String NMTOPO_TOPOLOGY_END = "</nmtopo:topology>";
     private static final String CTRLPLANE_TOPOLOGY_END = "</CtrlPlane:topology>";
-    
+
     private final WebTarget path;
-    
+
     // Hold the original parsed NMWG topology just in case.
     private CtrlPlaneTopologyContent topology;
 
     // Our internal representation of NMWG with normalized identifiers.
     private CtrlDomain parsedDomain;
-    
+
     private static final String PACKAGE = "net.es.nsi.topology.translator.jaxb.nmwg";
     private final JaxbParser nmwgParser;
-    
+
     /**
-     * 
+     *
      * @param nmwg
      * @param secure
      * @param domain
@@ -84,20 +84,20 @@ public class NmwgTopology {
      * @throws NoSuchAlgorithmException
      * @throws CertificateException
      * @throws KeyManagementException
-     * @throws UnrecoverableKeyException 
+     * @throws UnrecoverableKeyException
      */
     public NmwgTopology(SourceType nmwg, HttpsConfig secure, String domain) throws UnsupportedEncodingException, KeyStoreException, IOException, NoSuchAlgorithmException, CertificateException, KeyManagementException, UnrecoverableKeyException, JAXBException {
         this.nmwgParser = JaxbParser.getInstance();
-        
+
         // Make sure we have a domain provided.
         if (Strings.isNullOrEmpty(domain)) {
             throw new IllegalArgumentException("Domain cannot be null or empty string.");
         }
-        
+
         // Get our REST client and set root URL.
         RestClient restClient = new RestClient(secure);
         WebTarget tempPath = restClient.get().target(nmwg.getBaseURL()).queryParam("domain", domain);
-        
+
         // Now we add additional parameters.
         for (ParameterType parameter : nmwg.getParameters()) {
             try {
@@ -108,10 +108,10 @@ public class NmwgTopology {
                 throw ex;
             }
         }
-        
+
         path = tempPath;
     }
-    
+
     public void process() throws IllegalArgumentException, JAXBException {
         Response response = path.request().accept(MediaType.APPLICATION_XML).get();
 
@@ -232,12 +232,13 @@ public class NmwgTopology {
 
                         Optional<String> remoteLinkId = Optional.fromNullable(NsiUtilities.normalizeId(link.getRemoteLinkId()));
                         Optional<String> vlanRangeAvailability = Optional.absent();
+                        Optional<String> encodingType = Optional.absent();
                         boolean vlanTranslation = false;
                         CtrlPlaneSwcapContent switchingCapabilityDescriptors = link.getSwitchingCapabilityDescriptors();
                         if (switchingCapabilityDescriptors != null) {
+                            encodingType = Optional.fromNullable(switchingCapabilityDescriptors.getEncodingType());
                             CtrlPlaneSwitchingCapabilitySpecificInfo switchingCapabilitySpecificInfo = switchingCapabilityDescriptors.getSwitchingCapabilitySpecificInfo();
                             if (switchingCapabilitySpecificInfo != null) {
-
                                 vlanRangeAvailability = Optional.of(Optional.fromNullable(switchingCapabilitySpecificInfo.getVlanRangeAvailability()).or(Constants.NML_ETHERNET_VLAN_RANGE));
                                 if (switchingCapabilitySpecificInfo.isVlanTranslation() != null) {
                                     vlanTranslation = switchingCapabilitySpecificInfo.isVlanTranslation();
@@ -269,7 +270,7 @@ public class NmwgTopology {
 
                         // Add this link.
                         CtrlLink ctrlLink = new CtrlLink(link.getId(), id, remoteLinkId,
-                                vlanRangeAvailability, vlanTranslation, capacity,
+                                encodingType, vlanRangeAvailability, vlanTranslation, capacity,
                                 maxCapacity, minCapacity, granularity);
                         ctrlDomain.addLink(ctrlLink);
                     }

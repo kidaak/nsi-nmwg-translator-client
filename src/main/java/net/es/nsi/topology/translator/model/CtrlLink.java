@@ -4,7 +4,7 @@ import com.google.common.base.Optional;
 
 /**
  * A NMWG control plane link.
- * 
+ *
  * @author hacksaw
  */
 public class CtrlLink {
@@ -16,6 +16,7 @@ public class CtrlLink {
     private Optional<String> remoteLinkId;
     private Optional<String> vlanRangeAvailability;
     private boolean vlanTranslation;
+    private Optional<String> encodingType;
 
     // Link attributed inherited from parent port.
     private Optional<String> capacity;
@@ -34,18 +35,22 @@ public class CtrlLink {
         minimumReservableCapacity = Optional.absent();
         granularity = Optional.absent();
         vlanTranslation = false;
+        encodingType = Optional.absent();
     }
 
     /**
      * Create a link with the provided base values.
-     * 
+     *
      * @param originalId The original NMWG identifier.
      * @param id The normalized NSI identifier.
      * @param remoteLinkId The remote link identifier (normalized to NSI identifier).
+     * @param encodingType
      * @param vlanRangeAvailability The VLAN range allocated to the port.
      * @param vlanTranslation Does the link support VLAN translation.
      */
-    public CtrlLink(String originalId, String id, Optional<String> remoteLinkId, Optional<String> vlanRangeAvailability, boolean vlanTranslation) {
+    public CtrlLink(String originalId, String id, Optional<String> remoteLinkId,
+            Optional<String> encodingType, Optional<String> vlanRangeAvailability,
+            boolean vlanTranslation) {
         // Store the original id for mapping.
         this.originalId = originalId;
 
@@ -53,6 +58,7 @@ public class CtrlLink {
         this.id = id;
 
         this.remoteLinkId = remoteLinkId;
+        this.encodingType = encodingType;
         this.vlanRangeAvailability = vlanRangeAvailability;
         this.vlanTranslation = vlanTranslation;
 
@@ -64,10 +70,11 @@ public class CtrlLink {
 
     /**
      * Create a link with the provided base values.
-     * 
+     *
      * @param originalId The original NMWG identifier.
      * @param id The normalized NSI identifier.
      * @param remoteLinkId The remote link identifier (normalized to NSI identifier).
+     * @param encodingType The type of frame encoding on the link.
      * @param vlanRangeAvailability The VLAN range allocated to the port.
      * @param vlanTranslation Does the link support VLAN translation.
      * @param capacity The capacity of the link.
@@ -76,6 +83,7 @@ public class CtrlLink {
      * @param granularity The granularity of the link in mb/s.
      */
     public CtrlLink(String originalId, String id, Optional<String> remoteLinkId,
+            Optional<String> encodingType,
             Optional<String> vlanRangeAvailability, boolean vlanTranslation,
             Optional<String> capacity, Optional<String> maximumReservableCapacity,
             Optional<String> minimumReservableCapacity, Optional<String> granularity) {
@@ -86,6 +94,7 @@ public class CtrlLink {
         this.id = id;
 
         this.remoteLinkId = remoteLinkId;
+        this.encodingType = encodingType;
         this.vlanRangeAvailability = vlanRangeAvailability;
         this.vlanTranslation = vlanTranslation;
 
@@ -94,7 +103,7 @@ public class CtrlLink {
         this.minimumReservableCapacity = minimumReservableCapacity;
         this.granularity = granularity;
     }
-    
+
     /**
      * @return the originalId
      */
@@ -111,7 +120,7 @@ public class CtrlLink {
 
     /**
      * Get the normalized NSI identifier.
-     * 
+     *
      * @return the normalized NSI identifier.
      */
     public String getId() {
@@ -120,7 +129,7 @@ public class CtrlLink {
 
     /**
      * Set the normalized NSI identifier.
-     * 
+     *
      * @param id the normalized NSI identifier to set.
      */
     public void setId(String id) {
@@ -129,7 +138,7 @@ public class CtrlLink {
 
     /**
      * Get the remote link identifier.
-     * 
+     *
      * @return the remoteLinkId
      */
     public Optional<String> getRemoteLinkId() {
@@ -138,7 +147,7 @@ public class CtrlLink {
 
     /**
      * Set the remote link identifier.
-     * 
+     *
      * @param remoteLinkId the remoteLinkId to set
      */
     public void setRemoteLinkId(Optional<String> remoteLinkId) {
@@ -147,7 +156,7 @@ public class CtrlLink {
 
     /**
      * Get the VLAN range available on the link.
-     * 
+     *
      * @return the vlanRangeAvailability
      */
     public Optional<String> getVlanRangeAvailability() {
@@ -156,7 +165,7 @@ public class CtrlLink {
 
     /**
      * Set the VLAN range available on the link.
-     * 
+     *
      * @param vlanRangeAvailability the vlanRangeAvailability to set
      */
     public void setVlanRangeAvailability(Optional<String> vlanRangeAvailability) {
@@ -165,7 +174,7 @@ public class CtrlLink {
 
     /**
      * Get the link capacity.
-     * 
+     *
      * @return the capacity
      */
     public Optional<String> getCapacity() {
@@ -174,7 +183,7 @@ public class CtrlLink {
 
     /**
      * Set the link capacity.
-     * 
+     *
      * @param capacity the capacity to set
      */
     public void setCapacity(Optional<String> capacity) {
@@ -183,7 +192,7 @@ public class CtrlLink {
 
     /**
      * Get the maximum reservable capacity on the link.
-     * 
+     *
      * @return the maximumReservableCapacity
      */
     public Optional<String> getMaximumReservableCapacity() {
@@ -192,7 +201,7 @@ public class CtrlLink {
 
     /**
      * Set the maximum reservable capacity on the link.
-     * 
+     *
      * @param maximumReservableCapacity the maximumReservableCapacity to set
      */
     public void setMaximumReservableCapacity(Optional<String> maximumReservableCapacity) {
@@ -201,7 +210,7 @@ public class CtrlLink {
 
     /**
      * Get the minimum reservable capacity on the link.
-     * 
+     *
      * @return the minimumReservableCapacity
      */
     public Optional<String> getMinimumReservableCapacity() {
@@ -210,7 +219,7 @@ public class CtrlLink {
 
     /**
      * Set the minimum reservable capacity on the link.
-     * 
+     *
      * @param minimumReservableCapacity the minimumReservableCapacity to set
      */
     public void setMinimumReservableCapacity(Optional<String> minimumReservableCapacity) {
@@ -219,7 +228,7 @@ public class CtrlLink {
 
     /**
      * Get the granularity of the link in mb/s.
-     * 
+     *
      * @return the granularity
      */
     public Optional<String> getGranularity() {
@@ -228,7 +237,7 @@ public class CtrlLink {
 
     /**
      * Set the granularity of the link in mb/s.
-     * 
+     *
      * @param granularity the granularity to set
      */
     public void setGranularity(Optional<String> granularity) {
@@ -237,7 +246,7 @@ public class CtrlLink {
 
     /**
      * Get the link type (UNKNOWN, INVALID, INNI, ENNI, UNI).
-     * 
+     *
      * @return the linkType
      */
     public CtrlLinkType getLinkType() {
@@ -246,7 +255,7 @@ public class CtrlLink {
 
     /**
      * Set the link type (UNKNOWN, INVALID, INNI, ENNI, UNI).
-     * 
+     *
      * @param linkType the linkType to set
      */
     public void setLinkType(CtrlLinkType linkType) {
@@ -255,7 +264,7 @@ public class CtrlLink {
 
     /**
      * Is VLAN translation enabled on this link?
-     * 
+     *
      * @return the vlanTranslation
      */
     public boolean isVlanTranslation() {
@@ -264,10 +273,24 @@ public class CtrlLink {
 
     /**
      * Set the VLAN translation mode on the link.
-     * 
+     *
      * @param vlanTranslation the vlanTranslation to set
      */
     public void setVlanTranslation(boolean vlanTranslation) {
         this.vlanTranslation = vlanTranslation;
+    }
+
+    /**
+     * @return the encodingType
+     */
+    public Optional<String> getEncodingType() {
+        return encodingType;
+    }
+
+    /**
+     * @param encodingType the encodingType to set
+     */
+    public void setEncodingType(Optional<String> encodingType) {
+        this.encodingType = encodingType;
     }
 }
