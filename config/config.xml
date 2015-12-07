@@ -6,6 +6,13 @@
     </nmwg>
     <nsa>config/nsa-esnet.xml</nsa>
     <dds>http://localhost:8401/dds</dds>
+    <signature sign="true">
+        <alias>macauley</alias>
+        <keyStore type="JKS">
+            <file>config/keystore.jks</file>
+            <password>changeit</password>
+        </keyStore>
+    </signature>
     <topology>output/topology-esnet.xml</topology>
     <mapping>output/mapping-esnet.json</mapping>
     <lifeTime>5184000</lifeTime>

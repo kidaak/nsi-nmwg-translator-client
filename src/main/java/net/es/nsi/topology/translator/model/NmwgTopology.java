@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.es.nsi.topology.translator.model;
 
 import com.google.common.base.Optional;
@@ -28,11 +24,12 @@ import net.es.nsi.topology.translator.gson.StpType;
 import net.es.nsi.topology.translator.http.HttpsConfig;
 import net.es.nsi.topology.translator.http.RestClient;
 import net.es.nsi.topology.translator.jaxb.JaxbParser;
+import net.es.nsi.topology.translator.jaxb.NmwgParser;
 import net.es.nsi.topology.translator.jaxb.configuration.ParameterType;
 import net.es.nsi.topology.translator.jaxb.configuration.PeeringType;
 import net.es.nsi.topology.translator.jaxb.configuration.ServiceDefinitionType;
 import net.es.nsi.topology.translator.jaxb.configuration.SourceType;
-import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyType;
+import net.es.nsi.topology.translator.jaxb.nml.NmlTopologyType;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneDomainContent;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneLinkContent;
 import net.es.nsi.topology.translator.jaxb.nmwg.CtrlPlaneNodeContent;
@@ -70,7 +67,6 @@ public class NmwgTopology {
     // Our internal representation of NMWG with normalized identifiers.
     private CtrlDomain parsedDomain;
 
-    private static final String PACKAGE = "net.es.nsi.topology.translator.jaxb.nmwg";
     private final JaxbParser nmwgParser;
 
     /**
@@ -87,7 +83,7 @@ public class NmwgTopology {
      * @throws UnrecoverableKeyException
      */
     public NmwgTopology(SourceType nmwg, HttpsConfig secure, String domain) throws UnsupportedEncodingException, KeyStoreException, IOException, NoSuchAlgorithmException, CertificateException, KeyManagementException, UnrecoverableKeyException, JAXBException {
-        this.nmwgParser = JaxbParser.getInstance();
+        this.nmwgParser = NmwgParser.getInstance();
 
         // Make sure we have a domain provided.
         if (Strings.isNullOrEmpty(domain)) {
@@ -98,7 +94,7 @@ public class NmwgTopology {
         RestClient restClient = new RestClient(secure);
         WebTarget tempPath = restClient.get().target(nmwg.getBaseURL()).queryParam("domain", domain);
 
-        // Now we add additional parameters.
+        // Now we add additional parameters to the query.
         for (ParameterType parameter : nmwg.getParameters()) {
             try {
                 String value = URLEncoder.encode(parameter.getValue(), "UTF-8");
@@ -112,6 +108,12 @@ public class NmwgTopology {
         path = tempPath;
     }
 
+    /**
+     * Execute the remote NMWG query.
+     *
+     * @throws IllegalArgumentException
+     * @throws JAXBException
+     */
     public void process() throws IllegalArgumentException, JAXBException {
         Response response = path.request().accept(MediaType.APPLICATION_XML).get();
 

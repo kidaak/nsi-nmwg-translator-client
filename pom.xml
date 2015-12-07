@@ -126,7 +126,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -177,6 +177,7 @@
                         <packageName>net.es.nsi.topology.translator.jaxb.configuration</packageName>
                     </configuration>
                   </execution>
+
                   <execution>
                     <id>nmwg</id>
                     <goals>
@@ -191,6 +192,7 @@
                         <clearOutputDir>false</clearOutputDir>
                     </configuration>
                   </execution>
+
                   <execution>
                     <id>dds</id>
                     <goals>
@@ -200,8 +202,38 @@
                         <bindingDirectory>${basedir}/src/main/xsd</bindingDirectory>
                         <bindingFiles>dds.xjb</bindingFiles>
                         <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
-                        <schemaFiles>ogf_nsi_discovery_protocol_v1_0.xsd, nmlbase.xsd, nml-ethernet.xsd, ogf_nsi_services_definition_v2_0.xsd, ogf_nsi_discovery_nsa_v1_0.xsd, xCard.xsd</schemaFiles>
+                        <schemaFiles>ogf_nsi_discovery_protocol_v1_0.xsd</schemaFiles>
                         <packageName>net.es.nsi.topology.translator.jaxb.dds</packageName>
+                        <clearOutputDir>false</clearOutputDir>
+                    </configuration>
+                  </execution>
+
+                  <execution>
+                    <id>nml</id>
+                    <goals>
+                        <goal>xjc</goal>
+                    </goals>
+                    <configuration>
+                        <bindingDirectory>${basedir}/src/main/xsd</bindingDirectory>
+                        <bindingFiles>nml.xjb</bindingFiles>
+                        <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                        <schemaFiles>nmlbase.xsd, nml-ethernet.xsd, ogf_nsi_services_definition_v2_0.xsd</schemaFiles>
+                        <packageName>net.es.nsi.topology.translator.jaxb.nml</packageName>
+                        <clearOutputDir>false</clearOutputDir>
+                    </configuration>
+                  </execution>
+
+                  <execution>
+                    <id>nsa</id>
+                    <goals>
+                        <goal>xjc</goal>
+                    </goals>
+                    <configuration>
+                        <bindingDirectory>${basedir}/src/main/xsd</bindingDirectory>
+                        <bindingFiles>nsa.xjb</bindingFiles>
+                        <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                        <schemaFiles>ogf_nsi_discovery_nsa_v1_0.xsd, xCard.xsd</schemaFiles>
+                        <packageName>net.es.nsi.topology.translator.jaxb.nsa</packageName>
                         <clearOutputDir>false</clearOutputDir>
                     </configuration>
                   </execution>
@@ -268,6 +300,22 @@
                     </execution>
                   </executions>
               </plugin>
+
+              <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>net.es.nsi.topology.translator.Client</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

@@ -1,7 +1,7 @@
 package net.es.nsi.topology.translator.model;
 
 import net.es.nsi.topology.translator.jaxb.configuration.ServiceDefinitionType;
-import net.es.nsi.topology.translator.jaxb.dds.NmlSwitchingServiceType;
+import net.es.nsi.topology.translator.jaxb.nml.NmlSwitchingServiceType;
 
 /**
  * Map between a serviceDefinition and switchingService.

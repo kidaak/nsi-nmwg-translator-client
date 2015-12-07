@@ -6,7 +6,7 @@ import java.util.TimeZone;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import net.es.nsi.topology.translator.jaxb.dds.EthEncodingTypes;
+import net.es.nsi.topology.translator.jaxb.nml.EthEncodingTypes;
 import net.es.nsi.topology.translator.model.Constants;
 import net.es.nsi.topology.translator.model.Transform;
 

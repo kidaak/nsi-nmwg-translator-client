@@ -25,6 +25,7 @@
             <xsd:element name="nmwg"              type="tns:SourceType" />
             <xsd:element name="nsa"               type="xsd:anyURI" />
             <xsd:element name="dds"               type="xsd:anyURI" minOccurs="0" />
+            <xsd:element name="signature"         type="tns:SignatureType" minOccurs="0" />
             <xsd:element name="topology"          type="xsd:anyURI" minOccurs="0" />
             <xsd:element name="mapping"           type="xsd:anyURI" minOccurs="0" />
             <xsd:element name="lifeTime"          type="xsd:long" />
@@ -55,6 +56,30 @@
                 <xsd:attribute  name="type"  type="xsd:anyURI"  use="required"/>
             </xsd:extension>
         </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="AliasType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension  base="xsd:string">
+                <xsd:attribute  name="sign"  type="xsd:boolean"  default="false"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="SignatureType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="alias"     type="xsd:string" />
+            <xsd:element name="keyStore"  type="tns:KeyStoreType" />
+        </xsd:sequence>
+        <xsd:attribute  name="sign"  type="xsd:boolean"  default="false"/>
     </xsd:complexType>
     
     <xsd:complexType name="ServiceDefinitionType">

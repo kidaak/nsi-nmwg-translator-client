@@ -10,7 +10,7 @@ import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
-import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyType;
+import net.es.nsi.topology.translator.jaxb.nml.NmlTopologyType;
 import net.es.nsi.topology.translator.model.NmwgTopology;
 import net.es.nsi.topology.translator.model.NsaDocument;
 import net.es.nsi.topology.translator.utilities.NsiUtilities;
@@ -22,19 +22,19 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Implements the NMWG to NML translation workflow including creation of target
- * output files and writing of NSA description and NML topology files to 
+ * output files and writing of NSA description and NML topology files to
  * associated DDS service.
- * 
+ *
  * @author hacksaw
  */
 public class Orchestrator {
     private final Logger log = LoggerFactory.getLogger(getClass());
     private final String baseDir;
     private final String configFile;
-    
+
     /**
      * Create an orchestrator using the provided configuration.
-     * 
+     *
      * @param baseDir Base directory for relative file name in configFile and defaults.
      * @param configFile Runtime configuration for the orchestrator.
      */
@@ -45,7 +45,7 @@ public class Orchestrator {
 
     /**
      * Invoke the workflow orchestration.
-     * 
+     *
      * @throws JAXBException
      * @throws IOException
      * @throws DatatypeConfigurationException
@@ -54,7 +54,7 @@ public class Orchestrator {
      * @throws NoSuchAlgorithmException
      * @throws CertificateException
      * @throws KeyManagementException
-     * @throws UnrecoverableKeyException 
+     * @throws UnrecoverableKeyException
      */
     public void orchestrate() throws JAXBException, IOException, DatatypeConfigurationException, IllegalArgumentException, KeyStoreException, NoSuchAlgorithmException, CertificateException, KeyManagementException, UnrecoverableKeyException {
         // Read the configuration file.
@@ -66,7 +66,7 @@ public class Orchestrator {
             log.error("Could not read configuration.", ex);
             throw ex;
         }
-        
+
         // Read the NSA description file.
         NsaDocument document;
         try {
@@ -81,15 +81,15 @@ public class Orchestrator {
         DdsWriter dds = null;
         if (!Strings.isNullOrEmpty(conf.getDds())) {
             try {
-                dds = new DdsWriter(conf.getDds(), conf.getClient());
+                dds = new DdsWriter(conf.getDds(), conf);
                 dds.writeNsa(document.getDocument());
             }
             catch (IllegalArgumentException | KeyStoreException | IOException | NoSuchAlgorithmException | CertificateException | KeyManagementException | UnrecoverableKeyException ex) {
                 log.error("Exiting: Could not process NSA description file " + document.getDocument().getId(), ex);
                 throw ex;
             }
-        }    
-                
+        }
+
         // The nsi-bridge can only support a single networkId so make sure we
         // do not have multiple identifiers assigned in the NSA description file.
         String networkId;
@@ -101,9 +101,9 @@ public class Orchestrator {
             throw ex;
         }
 
-        try {            
+        try {
             // Get the NMWG topology for the specified domain.
-            NmwgTopology nmwg = new NmwgTopology(conf.getNmwg(), conf.getClient(), NsiUtilities.getNsiDomainName(networkId));
+            NmwgTopology nmwg = new NmwgTopology(conf.getNmwg(), conf.getHttpsConfig(), NsiUtilities.getNsiDomainName(networkId));
             nmwg.process();
 
             // Convert NMWG to NML topology.
@@ -140,15 +140,15 @@ public class Orchestrator {
                     log.error(error);
                     throw new IllegalArgumentException(error);
                 }
-                
+
                 MappingWriter mw = new MappingWriter(conf.getMappingFile());
                 mw.write(document.getDocument().getId(), version.get(),
                         serviceType.get(), networkId, nmwg.getMappings());
-            }            
+            }
         }
         catch (DatatypeConfigurationException | JAXBException | IllegalArgumentException | KeyStoreException | IOException | NoSuchAlgorithmException | CertificateException | KeyManagementException | UnrecoverableKeyException ex) {
             log.error("Could not process topology for networkId " + networkId, ex);
             throw ex;
-        }      
+        }
     }
 }

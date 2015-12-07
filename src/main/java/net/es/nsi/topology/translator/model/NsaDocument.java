@@ -6,8 +6,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.XMLGregorianCalendar;
 import net.es.nsi.topology.translator.jaxb.JaxbParser;
-import net.es.nsi.topology.translator.jaxb.dds.InterfaceType;
-import net.es.nsi.topology.translator.jaxb.dds.NsaType;
+import net.es.nsi.topology.translator.jaxb.NsaParser;
+import net.es.nsi.topology.translator.jaxb.nsa.InterfaceType;
+import net.es.nsi.topology.translator.jaxb.nsa.NsaType;
 import net.es.nsi.topology.translator.utilities.NsiUtilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +20,7 @@ import org.slf4j.LoggerFactory;
  * @author hacksaw
  */
 public class NsaDocument {
-    private static final Logger log = LoggerFactory.getLogger(NsaDocument.class);
+    private final Logger log = LoggerFactory.getLogger(getClass());
     private final NsaType nsaDocument;
     private final JaxbParser nsaParser;
 
@@ -34,7 +35,7 @@ public class NsaDocument {
      * @throws DatatypeConfigurationException Failed to create calendar object.
      */
     public NsaDocument(String file, long lifetime) throws IOException, JAXBException, DatatypeConfigurationException {
-        this.nsaParser = JaxbParser.getInstance();
+        this.nsaParser = NsaParser.getInstance();
 
         try {
             nsaDocument = nsaParser.parseFile(NsaType.class, file);

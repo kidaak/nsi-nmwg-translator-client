@@ -3,9 +3,9 @@ package net.es.nsi.topology.translator.writers;
 import java.io.IOException;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
-import net.es.nsi.topology.translator.jaxb.JaxbParser;
-import net.es.nsi.topology.translator.jaxb.dds.NmlTopologyType;
-import net.es.nsi.topology.translator.jaxb.dds.ObjectFactory;
+import net.es.nsi.topology.translator.jaxb.NmlParser;
+import net.es.nsi.topology.translator.jaxb.nml.NmlTopologyType;
+import net.es.nsi.topology.translator.jaxb.nml.ObjectFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +18,7 @@ public class NmlWriter {
     private final Logger log = LoggerFactory.getLogger(getClass());
     private final String file;
 
-    private final JaxbParser nmlParser;
+    private final NmlParser nmlParser;
 
     /**
      * Create a writer for the specified file.
@@ -26,7 +26,7 @@ public class NmlWriter {
      * @param file file to store XML document.
      */
     public NmlWriter(String file) {
-        this.nmlParser = JaxbParser.getInstance();
+        this.nmlParser = NmlParser.getInstance();
         this.file = file;
     }
 

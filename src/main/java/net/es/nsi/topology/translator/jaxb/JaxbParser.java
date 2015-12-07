@@ -3,6 +3,7 @@ package net.es.nsi.topology.translator.jaxb;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.Optional;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
@@ -19,6 +21,7 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -31,52 +34,37 @@ import org.w3c.dom.Document;
 public class JaxbParser {
     // Get a logger just in case we encounter a problem.
     private final Logger log = LoggerFactory.getLogger(getClass());
-    private static JAXBContext jc;
-    private static Marshaller marshaller;
-    private static Unmarshaller unmarshaller;
-    
-    private static final String PACKAGES = "net.es.nsi.topology.translator.jaxb.configuration:net.es.nsi.topology.translator.jaxb.nmwg:net.es.nsi.topology.translator.jaxb.dds";
+    private JAXBContext jc = null;
 
     /**
      * Private constructor loads the JAXB context once and prevents
      * instantiation from other classes.
-     * 
+     *
      * @param packages
-     * @throws javax.xml.bind.JAXBException
      */
-    private JaxbParser() {
+    public JaxbParser(String packages) {
         try {
             // Load a JAXB context.
-            jc = JAXBContext.newInstance(PACKAGES);
-            marshaller = jc.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            unmarshaller = jc.createUnmarshaller();
+            jc = JAXBContext.newInstance(packages);
         }
         catch (JAXBException jaxb) {
-            log.error("JaxbParser: Failed to load JAXB instance", jaxb);
+            log.error("JaxbParser: Failed to load JAXB instance for packages " + packages, jaxb);
         }
     }
-    
-    /**
-     * An internal static class that invokes our private constructor on object
-     * creation.
-     */
-    private static class JaxbParserHolder {
-        public static final JaxbParser INSTANCE = new JaxbParser();
+
+    private Marshaller marshaller() throws JAXBException {
+        Marshaller marshaller = jc.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        return marshaller;
     }
 
-    /**
-     * Returns an instance of this singleton class.
-     *
-     * @return An NmlParser object of the NSAType.
-     */
-    public static JaxbParser getInstance() {
-            return JaxbParserHolder.INSTANCE;
+    private Unmarshaller unmarshaller() throws JAXBException {
+        return jc.createUnmarshaller();
     }
 
     /**
      * Parse the given file into the specified JAXB object.
-     * 
+     *
      * @param <T> Target type of the JAXB object.
      * @param xmlClass Target class of the JAXB object.
      * @param file The file containing the XML document.
@@ -90,25 +78,31 @@ public class JaxbParser {
             return xml2Jaxb(xmlClass, bufferedInputStream);
         }
     }
-    
+
     /**
      * Write the JAXB object to the specified file.
-     * 
+     *
      * @param jaxbElement The JAXB element to write to file.
      * @param file The filename of the target file.
      * @throws JAXBException Could not convert the JAXB object to an XML document.
      * @throws IOException The specified file could not be created.
      */
     public void writeFile(JAXBElement<?> jaxbElement, String file) throws JAXBException, IOException {
+        File fd = new File(file);
+        if (!fd.exists()) {
+            log.debug("Creating file " + fd.getAbsolutePath());
+            FileUtils.touch(fd);
+        }
+
         // Parse the specified file.
         try (FileOutputStream fileOutputStream = new FileOutputStream(file); BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream)) {
-            marshaller.marshal(jaxbElement, fileOutputStream);
+            marshaller().marshal(jaxbElement, fileOutputStream);
         }
     }
 
     /**
      * Convert the specified JAXB object to a DOM object.
-     * 
+     *
      * @param jaxbElement JAXB object to convert.
      * @return The converted DOM object.
      * @throws JAXBException JAXB object could not be converted to DOM object.
@@ -120,24 +114,24 @@ public class JaxbParser {
         dbf.setNamespaceAware(true);
         DocumentBuilder db = dbf.newDocumentBuilder();
         Document doc = db.newDocument();
-        marshaller.marshal(jaxbElement, doc);
+        marshaller().marshal(jaxbElement, doc);
         return doc;
     }
 
     /**
      * Covert specified DOM object to JAXB.
-     * 
+     *
      * @param doc The DOM object to convert.
      * @return The converted JAXB object.
      * @throws JAXBException JAXBException JAXB object could not be created.
      */
     public JAXBElement<?> dom2Jaxb(Document doc) throws JAXBException {
-        return (JAXBElement<?>) unmarshaller.unmarshal(doc);
+        return (JAXBElement<?>) unmarshaller().unmarshal(doc);
     }
 
     /**
      * Convert the specified JAXB object to a string.
-     * 
+     *
      * @param jaxbElement JAXB object to convert.
      * @return A serialized XML string.
      * @throws JAXBException JAXB object could not be created.
@@ -147,7 +141,7 @@ public class JaxbParser {
         StringWriter writer = new StringWriter();
         String result;
         try {
-            marshaller.marshal(jaxbElement, writer);
+            marshaller().marshal(jaxbElement, writer);
             result = writer.toString();
         } catch (JAXBException ex) {
             // Something went wrong so get out of here.
@@ -161,28 +155,35 @@ public class JaxbParser {
         // Return the XML string.
         return result;
     }
-    
+
     /**
      * Convert the specified string representation of a XML document to a JAXB object.
-     * 
+     *
      * @param <T> Target type of the JAXB object.
      * @param xmlClass The target class of the JAXB object.
      * @param xml The string containing the XML document to convert.
      * @return JAXB object representing the XML document.
      * @throws JAXBException Could not parse the specified XML document.
      */
-    @SuppressWarnings("unchecked")
-    public <T extends Object> T xml2Jaxb(Class<T> xmlClass, String xml) throws JAXBException {
-        JAXBElement<T> element;
+    public <T extends Object> T xml2Jaxb(Class<T> xmlClass, String xml) throws JAXBException, IllegalArgumentException {
+        Optional<JAXBElement<T>> element;
         try (StringReader reader = new StringReader(xml)) {
-            element = (JAXBElement<T>) unmarshaller.unmarshal(reader);
+            element = Optional.ofNullable((JAXBElement<T>) unmarshaller().unmarshal(reader));
         }
-        return element.getValue();
+
+        if (!element.isPresent()) {
+            throw new IllegalArgumentException("Unable to convert string to JAXB, class=" + xmlClass.getName() + ", xml=\n" + xml);
+        }
+        else if (element.get().getDeclaredType() == xmlClass) {
+            return element.get().getValue();
+        }
+
+        throw new JAXBException("Expected XML for class " + xmlClass.getCanonicalName() + " but found " + element.get().getDeclaredType().getCanonicalName());
     }
 
     /**
      * Convert the XML document contained in the InputStream to a JAXB object.
-     * 
+     *
      * @param <T> Target type of the JAXB object.
      * @param xmlClass The target class of the JAXB object.
      * @param is InputStream containing the XML document.
@@ -192,8 +193,11 @@ public class JaxbParser {
      */
     @SuppressWarnings("unchecked")
     public <T extends Object> T xml2Jaxb(Class<T> xmlClass, InputStream is) throws JAXBException, IOException {
-        JAXBElement<T> element = (JAXBElement<T>) unmarshaller.unmarshal(getReader(is));
-        if (element.getDeclaredType() == xmlClass) {
+        JAXBElement<T> element = (JAXBElement<T>) unmarshaller().unmarshal(getReader(is));
+        if (element == null) {
+            throw new IllegalArgumentException("Unable to convert stream to JAXB, class=" + xmlClass.getName());
+        }
+        else if (element.getDeclaredType() == xmlClass) {
             return element.getValue();
         }
 
@@ -202,7 +206,7 @@ public class JaxbParser {
 
     /**
      * Convert the XML document contained in the BufferedInputStream to a JAXB object.
-     * 
+     *
      * @param <T> Target type of the JAXB object.
      * @param xmlClass The target class of the JAXB object.
      * @param is BufferedInputStream containing the XML document.
@@ -212,7 +216,7 @@ public class JaxbParser {
      */
     @SuppressWarnings("unchecked")
     public <T extends Object> T xml2Jaxb(Class<T> xmlClass, BufferedInputStream is) throws JAXBException, IOException {
-        JAXBElement<T> element = (JAXBElement<T>) unmarshaller.unmarshal(is);
+        JAXBElement<T> element = (JAXBElement<T>) unmarshaller().unmarshal(is);
         if (element.getDeclaredType() == xmlClass) {
             return element.getValue();
         }
@@ -230,7 +234,7 @@ public class JaxbParser {
      * Reader with the stream set to the first occurrence of the characters
      * "<?" within the stream.  Will no longer be needed in Jersey 2.19 that
      * now contains the fix.
-     * 
+     *
      * @param is InputStream to parse for XML document.
      * @return A Reader for the InputStream.
      * @throws IOException Could not read the stream.
